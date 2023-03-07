@@ -6,3 +6,4 @@ Shandor - Team Captain
 Anton - GitHub repository owner  
 William - CSS  
 Amelie - Discord server owner  
+Devarsh - index.html
