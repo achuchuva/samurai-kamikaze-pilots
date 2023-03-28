@@ -21,7 +21,7 @@
         <section id="manager-pos">
             <!-- form heading -->
             <fieldset>
-                <legend>Management Position Application</legend>
+                <legend>Game Programmer/Animator (Designer + Developer) Position Application</legend>
                 <br>
                 <!-- reference number 5 alphanum-->
                 <fieldset>
@@ -36,6 +36,7 @@
                     <input name="familyName" id="familyName" type="text" placeholder="Family name" required>
                     <br><br>
                     <!-- DOB date r -->
+                    <!-- Add DOB validation? for reference -> https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input/date -->
                     <label for="birthdate">Date of Birth:</label>
                     <input name="birthdate" id="birthdate" type="date" required>
                     <br><br>
@@ -79,12 +80,21 @@
                     <input type="number" name="postcode" id="postcode" pattern[0-9]{4} required>
                 </fieldset>
                 <fieldset>
+                    <legend>Contact Information</legend>
                     <!-- contact info -->
                     <!-- email addess email r -->
+                    <label for="email">Email address</label>
+                    <input type="email" name="email" id="email" required>
+                    <br>
                     <!-- phone number r -->
+                    <label for="phoneNum">Phone number</label>
+                    <input type="text" name="phoneNum" id="phoneNum" pattern[0-9] required> 
                 </fieldset>
                 <fieldset>
+                    <legend>About You</legend>
                     <!-- skills info -->
+                    <p>Please select all of the following that apply to you:</p>
+                    <br><br>
                     <!-- checkbox inputs checkbox r -->
                     <!-- other skills checkbox -->
                     <!-- other skills textarea -->
@@ -93,29 +103,9 @@
             </fieldset>
             <br>
         </section>
-        <br><br>
-        <section id="developer-pos">
-            <!-- form heading -->
-            <fieldset>
-                <legend>Developer Position Application</legend>
-                <br>
-                <!-- reference number -->
-                <fieldset>
-                    <!-- personal info -->
-                </fieldset>
-                <fieldset>
-                    <!-- address info -->
-                </fieldset>
-                <fieldset>
-                    <!-- contact info -->
-                </fieldset>
-                <fieldset>
-                    <!-- skills info -->
-                </fieldset>
-                <!-- submit button -->
-            </fieldset>
-            <br>
-        </section>
     </section>
+    <footer>
+        
+    </footer>
 </body>
 </html>
