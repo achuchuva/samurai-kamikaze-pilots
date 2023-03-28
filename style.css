@@ -1,13 +1,29 @@
+/*import open sans font from google fonts*/
 @import url('https://fonts.googleapis.com/css?family=Open+Sans&display=swap');
 
+/*basic body formatting*/
 body {
     font-family: Open Sans;
     margin: 0px;
     padding: 0px;
     margin-top: 52px;
+    /* background created by https://www.craiyon.com/ */
+    background-image: url("background.png");
+    background-attachment: fixed;
+    background-size: cover;
 }
 
+a {
+    color: #E0E0E0;
+    font-weight: bold;
+    text-decoration: none;
+}
 
+a:hover {
+    color: #FFFFFF;
+}
+
+/*vvv navbar vvv*/
 nav {
     display: flex;
     height: 54px;
@@ -16,41 +32,70 @@ nav {
     position: fixed;
     top: 0;
 }
-
+    /*
     nav img {
         padding: 0px 10px 0px 10px;
         width: 54px;
         height: 100%;
     }
-
-    nav div {
+*/
+    nav section {
         margin-top: 15px;
         color: #FFFFFF;
     }
 
     nav a:hover {
-        background-color: #DC2D27
+        background-color: #DC2D27;
     }
 
-    nav div a {
+    nav section a {
         padding: 17px;
         color: #FFFFFF;
         text-decoration: none;
     }
+/*^^^ navbar ^^^*/
 
+/*vvv sidebar vvv*/
+#sidebar {
+    right: 0px;
+    position: fixed;
+    background-color: rgba(220, 45, 39, 0.5);
+    color: #FFFFFF;
+    width: 25vw;
+    font-size: 24px;
+}
+
+    #sidebar a {
+        padding-left: 50px;
+        padding-right: 50px;
+        color: white;
+    }
+
+#sidebar a:hover {
+    background-color: #000000;
+}
+/*^^^ sidebar ^^^*/
+
+/* page content formatting */
 #content {
     padding: 10px;
     margin: 0px 50px 0px 50px;
 }
 
 h1 {
-    color: #DC2D27;
+    color: #FFFFFF;
+    background-color: rgba(0, 0, 0, 0.8);
+    padding: 20px;
+    margin-bottom: 40px;
+    border-radius: 10px;
+    text-decoration: underline;
 }
 
 .flex-container {
-    display:flex;
+    display: flex;
     justify-content: space-evenly;
     flex-wrap: wrap;
+    overflow-wrap: break-word;
 }
 
 .flexbox {
@@ -59,6 +104,21 @@ h1 {
     width: 25vw;
 }
 
-.flexbox dl {
-    text-align: left;
-}
+    .flexbox h2 {
+        background-color: rgba(0, 0, 0, 0.8);
+        color: #FFFFFF;
+        margin: 0px;
+        padding: 10px;
+        border-top-left-radius: 10px;
+        border-top-right-radius: 10px;
+    }
+
+    .flexbox dl {
+        text-align: left;
+        background-color: rgba(220, 45, 39, 0.5);
+        color: #FFFFFF;
+        padding: 20px;
+        margin: 0px;
+        border-bottom-left-radius: 10px;
+        border-bottom-right-radius: 10px;
+    }
