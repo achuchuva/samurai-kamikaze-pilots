@@ -8,93 +8,127 @@
 	<title>SKP - Apply</title>
 </head>
 <body>
-    <nav>
-    <section> <a href="index.html"><img src="SKPLogo.png" alt="HOME"></a> </section>
-    <section> <a href="jobs.html">JOBS</a> </section>
-    <section> <a href="apply.html">APPLY</a> </section>
-    <section> <a href="about.html">ABOUT</a> </section>
-    </nav>
-    <section id="content">
-        <h1>Apply for a job with SKP</h1>
-        <h2>Which advertised job are you applying for today?</h2>
-        <!-- create internal page jumpto/hyperlinks to both forms -->
+
+    <section id="primary">
+
+        <nav>
+            <a href="index.html"> <section> <img src="SKPLogo.png" alt="HOME"> </section> </a>
+            <a href="jobs.html"> <section> JOBS </section> </a>
+            <a href="apply.html"> <section> APPLY </section> </a>
+            <a href="about.html"> <section> ABOUT </section> </a>
+        </nav>
+
+        <section class="content">
+            <h1>Apply for a job with SKP</h1>
+            <hr />
+            <h2>Which advertised job are you applying for today?</h2>
+            <!-- create internal page jumpto/hyperlinks to both forms -->
+            
+
+            <section>
+                <a href="#manager-pos"><button>test</button></a> 
+                <a href="#manager-pos"><button>test</button></a>
+            </section>
+        </section>
+
+    </section>
+
+    <section id="secondary">
+
         <section id="manager-pos">
             <!-- form heading -->
             <fieldset>
                 <legend>Game Programmer/Animator (Designer + Developer) Position Application</legend>
-                <br>
                 <!-- reference number 5 alphanum-->
                 <fieldset>
                     <!-- personal info -->
                     <legend>Personal Details</legend>
-                    <br>
                     <!-- First text r -->
-                    <label for="givenName">Given Name:</label>
-                    <input name="givenName" id="givenName" type="text" placeholder="Given name" required>
+                    <section class="formSection">
+                        <label for="givenName">Given Name</label>
+                        <input name="givenName" id="givenName" type="text" placeholder="Given name" required>
+                    </section>
                     <!-- Last text r -->
-                    <label for="familyName">Family Name:</label>
-                    <input name="familyName" id="familyName" type="text" placeholder="Family name" required>
-                    <br><br>
+                    <section class="formSection">
+                        <label for="familyName">Family Name</label>
+                        <input name="familyName" id="familyName" type="text" placeholder="Family name" required>
+                        <br>
+                    </section>
                     <!-- DOB date r -->
                     <!-- Add DOB validation? for reference -> https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input/date -->
-                    <label for="birthdate">Date of Birth:</label>
-                    <input name="birthdate" id="birthdate" type="date" required>
-                    <br><br>
+                    <section class="formSection">
+                        <label for="birthdate">Date of Birth</label>
+                        <input name="birthdate" id="birthdate" type="date" required>
+                        <br>
+                    </section>
                     <!-- gender radio r -->
-                    <label for="male">Male</label>
-                    <input type="radio" name="gender" id="male" value="Male" required>
-                    <label for="female">Female</label>
-                    <input type="radio" name="gender" id="female" value="Female">
-                    <label for="nonbinary">Non-Binary</label>
-                    <input type="radio" name="gender" id="nonbinary" value="Non-Binary">
-                    <label for="other">Prefer not to specify</label>
-                    <input type="radio" name="gender" id="other" value="Other">
-                    <br>
+                    <section class="formSection">
+                        <label for="male" class="gender">Male</label>
+                        <input type="radio" name="gender" id="male" value="Male" required>
+                        <label for="female" class="gender">Female</label>
+                        <input type="radio" name="gender" id="female" value="Female">
+                        <label for="nonbinary" class="gender">Non-Binary</label>
+                        <input type="radio" name="gender" id="nonbinary" value="Non-Binary">
+                        <label for="other" class="gender">Prefer not to specify</label>
+                        <input type="radio" name="gender" id="other" value="Other">
+                        <br>
+                    </section>
                 </fieldset>
                 <fieldset>
                     <legend>Locational Information</legend>
-                    <br>
                     <!-- address info -->
                     <!-- street address text r -->
-                    <label for="street">Street address</label>
-                    <input type="text" name="street" id="street" required>
-                    <br><br>
+                    <section class="formSection">
+                        <label for="street">Street address</label>
+                        <input type="text" name="street" id="street" required>
+                        <br>
+                    </section>
                     <!-- suburb/town text r -->
-                    <label for="suburb">Suburb/Town</label>
-                    <input type="text" name="suburb" id="suburb" required>
-                    <br><br>
+                    <section class="formSection">
+                        <label for="suburb">Suburb/Town</label>
+                        <input type="text" name="suburb" id="suburb" required>
+                        <br>
+                    </section>
                     <!-- state dropdown r -->
-                    <label for="state">State</label>
-                    <select id="state" name="state" required>
-                        <option value="vic">Victoria</option>
-                        <option value="nsw">New South Whales</option>
-                        <option value="tas">Tasmania</option>
-                        <option value="sa">South Australia</option>
-                        <option value="wa">Western Australia</option>
-                        <option value="nt">Northern Territory</option>
-                        <option value="act">Australian Captial Territory</option>
-                    </select>
-                    <br><br>
+                    <section class="formSection">
+                        <label for="state">State</label>
+                        <select id="state" name="state" required>
+                            <option value="vic">Victoria</option>
+                            <option value="nsw">New South Whales</option>
+                            <option value="tas">Tasmania</option>
+                            <option value="sa">South Australia</option>
+                            <option value="wa">Western Australia</option>
+                            <option value="nt">Northern Territory</option>
+                            <option value="act">Australian Captial Territory</option>
+                        </select>
+                        <br>
+                    </section>
                     <!-- postcode number r -->
-                    <label for="postcode">Postcode</label>
-                    <input type="number" name="postcode" id="postcode" pattern[0-9]{4} required>
+                    <section class="formSection">
+                        <label for="postcode">Postcode</label>
+                        <input type="number" name="postcode" id="postcode" pattern[0-9]{4} required>
+                    </section>
                 </fieldset>
                 <fieldset>
                     <legend>Contact Information</legend>
                     <!-- contact info -->
                     <!-- email addess email r -->
-                    <label for="email">Email address</label>
-                    <input type="email" name="email" id="email" required>
-                    <br>
+                    <section class="formSection">
+                        <label for="email">Email address</label>
+                        <input type="email" name="email" id="email" required>
+                        <br>
+                    </section>
                     <!-- phone number r -->
-                    <label for="phoneNum">Phone number</label>
-                    <input type="text" name="phoneNum" id="phoneNum" pattern[0-9] required> 
+                    <section class="formSection">
+                        <label for="phoneNum">Phone number</label>
+                        <input type="text" name="phoneNum" id="phoneNum" pattern[0-9] required>
+                    </section>
                 </fieldset>
                 <fieldset>
                     <legend>About You</legend>
                     <!-- skills info -->
                     <p>Please select all of the following that apply to you:</p>
-                    <br><br>
+                    <br>
                     <!-- checkbox inputs checkbox r -->
                     <!-- other skills checkbox -->
                     <!-- other skills textarea -->
@@ -103,6 +137,7 @@
             </fieldset>
             <br>
         </section>
+
     </section>
     <footer>
         
