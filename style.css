@@ -12,7 +12,7 @@ nav {
     text-align: center;
     padding: 1vh 25vw 1vh 25vw;
     display: flex;
-    justify-content: space-around;
+    justify-content: space-evenly;
     font-size: 20px;
     font-weight: bold;
 }
@@ -228,3 +228,30 @@ figure {
         height: 25vh;
         width: auto;
     }
+
+/* Footer */
+footer {
+  /* width: 100%; */
+  background-color: #f2f2f2;
+  padding: 20px;
+  text-align: center;
+}
+
+/* Footer content */
+footer p {
+  font-size: 14px;
+  color: #666;
+  margin: 0;
+}
+
+/* Footer links */
+footer a {
+  color: #333;
+  text-decoration: none;
+  border-bottom: 1px solid #333;
+}
+
+footer a:hover {
+  color: #000;
+  border-color: #000;
+}
