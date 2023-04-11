@@ -78,6 +78,11 @@ nav {
         transition: 0.2s ease-in-out;
     }
 
+    #primary button a {
+      text-decoration: none;
+      color: #DFE4E7;
+    }
+
 #primary button:hover {
     color: #CC3300;
     border-color: #DFE4E7;
