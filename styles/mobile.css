@@ -1,0 +1,83 @@
+@media(max-width: 1400px) {
+  .index-content {
+    display: block;
+  }
+
+  .index-content section {
+    padding-bottom: 20px;
+  }
+
+  .index-content figure {
+    padding: 0 6vw 0 6vw;
+  }
+}
+
+@media(max-width: 700px) {
+  /* When the checkbox is checked on the mobile view, expand the collapsible menu */
+  #navbar-checkbox:checked ~ nav {
+    padding: 0 0 0 10px;
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    background-image: linear-gradient(rgba(47, 47, 59, 0.8), rgba(47, 47, 59, 1));
+    border-radius: 10px;
+    top: 0;
+    width: 175px;
+    height: 400px;
+    /* Z-index used to place checkbox above collapsed nav */
+    z-index: 0;
+  }
+
+  #navbar-checkbox:not(:checked) ~ nav {
+    display: none;
+  }
+
+  nav a {
+    display: block;
+  }
+
+  nav section {
+    padding: 0;
+    text-align: left;
+  }
+
+  #primary input {
+    position: relative;
+    display: block;
+    z-index: 1;
+    top: 10px;
+    left: 10px;
+    width: 30px;
+    height: 30px;
+  }
+
+  /* Shrink the group photo width */
+  .about-info figure {
+    width: 300px;
+  }
+
+  #secondary {
+    padding: 32px 4vw 32px 4vw;
+  }
+
+  .content {
+    margin: 4vh 2vw 0 2vw;
+  }
+
+  aside {
+    width: 40vw;
+  }
+
+  aside section {
+    margin: 12px;
+  }
+
+  #primary h1 {
+    font-size: 1.5em;
+  }
+
+  #primary p {
+    margin: 0;
+  }
+
+}

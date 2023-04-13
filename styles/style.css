@@ -10,7 +10,7 @@
 
 nav {
     text-align: center;
-    padding: 1vh 25vw 1vh 25vw;
+    padding: 1vh 25vw 3vh 25vw;
     display: flex;
     justify-content: space-evenly;
     font-size: 20px;
@@ -31,11 +31,16 @@ nav {
         }
 
     nav section {
-        padding: 16px;
+        padding-top: 16px;
         background-color: rgba(223, 228, 231, 0);
         width: 120px;
         border-radius: 10px;
         transition: 0.2s ease-in-out;
+    }
+
+    /* By defualt hide the checkbox for the collapsible menu */
+    #navbar-checkbox {
+      display: none;
     }
 
 
@@ -44,7 +49,7 @@ nav {
 #primary {
     width: 100%;
     /* background created by https://www.craiyon.com/ */
-    background: radial-gradient(transparent, rgba(0,0,0,0.8)), url(background.png);
+    background: radial-gradient(transparent, rgba(0,0,0,0.8)), url(images/background.png);
     background-position: center;
     background-size: cover;
     background-attachment: fixed;
@@ -70,7 +75,7 @@ nav {
     #primary button {
         padding: 10px;
         margin-right: 10px;
-        width: 100px;
+        /* min-width: 100px; */
         background-image: linear-gradient(rgba(47, 47, 59, 0.4), rgba(47, 47, 59, 0.7));
         background-color: rgba(0, 0, 0, 0);
         border-radius: 10px;
@@ -81,6 +86,10 @@ nav {
     #primary button a {
       text-decoration: none;
       color: #DFE4E7;
+    }
+
+    #primary nav button  {
+      display: none;
     }
 
 #primary button:hover {
@@ -97,7 +106,7 @@ aside {
     width: 25vw;
     background-image: linear-gradient(rgba(47, 47, 59, 0.4), rgba(47, 47, 59, 0.7));
     margin: 50px 16vw 50px 50px;
-    height: calc(90vh - 100px);
+    height: calc(60vh);
     border: 2px solid #FFFFFF;
     border-radius: 10px;
 }
@@ -123,6 +132,39 @@ aside {
     padding: 32px 16vw 32px 16vw;
 }
 
+#secondary h2 {
+  font-size: 2.5em;
+  padding-bottom: 25px;
+  border-bottom: 1px solid #aeaeae;
+}
+
+#secondary h3 {
+  font-size: 1.7em;
+  padding: 15px 0 15px 0;
+}
+
+#secondary em {
+  font-size: 1.2em;
+}
+
+#secondary p {
+  padding-bottom: 10px;
+}
+
+/* Index specific content */
+.index-content {
+  display: flex;
+  padding: 0 5vw 0 5vw;
+}
+
+.index-content section {
+  flex: 4;
+}
+
+.index-content figure {
+  flex: 3;
+}
+
 
 /*Content*/
 
@@ -133,38 +175,35 @@ aside {
 /*Def-list*/
 
 dl {
+  float: left;
   width: 350px;
-  display: flex;
-  flex-direction: column;
-}
-
-dl section {
-  display: flex;
-  flex-direction: row;
+  display: grid;
+  grid-template-columns: max-content 1fr;
 }
 
 dt {
   font-weight: bold;
   flex: 1;
-  width: 100px;
+  width: 120px;
 }
 
 dd {
   flex: 1;
 }
 
-/* Def-list to be inline with figure */
-.about-info {
-  display: flex;
-  flex-direction: row;
+dd a {
+  text-decoration: none;
+  color: #979797;
 }
 
-.about-info dl {
-  flex: 1;
+dd a:hover {
+  color: #dddddd;
+  font-weight: bold;
 }
 
 .about-info figure {
-  flex: 1;
+  width: 600px;
+  float: right;
 }
 
 
@@ -181,15 +220,25 @@ ul {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
+    padding: 0;
 }
 
 .flexbox {
-    width: 400px;
+    max-width: 350px;
     min-height: 600px;
     padding: 16px;
-    /* background-image: linear-gradient(rgba(47, 47, 59, 0.2), rgba(47, 47, 59, 0.5)); */
     border-radius: 10px;
     margin: 5px;
+    display: flex;
+    flex-direction: column;
+}
+
+.flexbox img {
+  border: 5px solid #333;
+}
+
+.flexbox section {
+  padding-bottom: 10px;
 }
 
 .flexbox a {
@@ -220,7 +269,7 @@ label {
     vertical-align: top;
 }
 
-input {
+#secondary input {
     background-color: #FFFFFF;
     padding-left: 4px;
     margin-left: 8px;
@@ -337,4 +386,8 @@ footer a:hover {
 /* Miscellaneous */
 .red-font {
   color: red;
+}
+
+.centered {
+  text-align: center;
 }
