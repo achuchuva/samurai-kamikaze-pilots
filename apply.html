@@ -1,42 +1,45 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Apply for work with SKP Secret Key Productions" />
-    <meta name="author" content="Amelie Kercher" />
+	<meta charset="utf-8"/>
+	<meta name="description"	content="Apply for work with SKP Secret Key Productions"/>
+	<meta name="author"	content="Amelie Kercher"/>
     <link rel="stylesheet" href="style.css" />
-    <title>SKP - Apply</title>
+	<title>SKP - Apply</title>
 </head>
-
 <body>
-    <nav>
-    <section> <a href="index.html"><img src="SKPLogo.png" alt="HOME"></a> </section>
-    <section> <a href="jobs.html">JOBS</a> </section>
-    <section> <a href="apply.html">APPLY</a> </section>
-    <section> <a href="about.html">ABOUT</a> </section>
-    </nav>
-    <section id="content">
-        <h1>Apply for a job with SKP</h1>
-        <h2>Which advertised job are you applying for today?</h2>
-        <label for="check">
-            Toggle
-        <input type="checkbox" id="check">
-        <p id="game">Game Developer Position</p>
-        <!-- create internal page jumpto/hyperlinks to both forms -->
-        <section id="job-pos">
+
+    <section id="primary">
+
+        <nav>
+            <a href="index.html"> <section> <img src="SKPLogo.png" alt="HOME"> </section> </a>
+            <a href="jobs.html"> <section> JOBS </section> </a>
+            <a href="apply.html"> <section> APPLY </section> </a>
+            <a href="about.html"> <section> ABOUT </section> </a>
+        </nav>
+
+        <section class="content">
+            <h1>Apply for a job with SKP</h1>
+            <hr />
+            <h2>Which advertised job are you applying for today?</h2>
+            <!-- create internal page jumpto/hyperlinks to both forms -->
+            
+
+            <section>
+                <a href="#manager-pos"><button>test</button></a> 
+                <a href="#manager-pos"><button>test</button></a>
+            </section>
+        </section>
+
+    </section>
+
+    <section id="secondary">
+
+        <section id="manager-pos">
             <!-- form heading -->
             <fieldset>
-                <legend id="game">Game Developer Position
-                </legend>
-                <legend id="manager">Game Designer Posititon</legend>
-                <br>
+                <legend>Game Programmer/Animator (Designer + Developer) Position Application</legend>
                 <!-- reference number 5 alphanum-->
-                <label for="reference">Please enter a reference number:</label>
-                <input type="text" name="reference" id="reference" required pattern[0-9a-zA-Z]{5}>
-                <br><br>
                 <fieldset>
                     <!-- personal info -->
                     <legend>Personal Details</legend>
@@ -127,22 +130,8 @@
                     <p>Please select all of the following that apply to you:</p>
                     <br>
                     <!-- checkbox inputs checkbox r -->
-                    <label for="python">Python</label>
-                    <input type="checkbox" name="skills" id="python">
-                    <label for="javascript">JavaScript</label>
-                    <input type="checkbox" name="skills" id="javascript">
-                    <label for="C#">C#</label>
-                    <input type="checkbox" name="skills" id="C#">
-                    <label for="unity">Unity</label>
-                    <input type="checkbox" name="skills" id="unity">
-
                     <!-- other skills checkbox -->
-                    <br>
-                    <label for="otherskills">Other skills (please elaborate below)</label>
-                    <input type="checkbox" name="skills" id="otherskills" checked>
                     <!-- other skills textarea -->
-                    <br>
-                    <textarea rows="20" cols="70" name="skillsText">Tell us about yourself... Please mention any prior experience</textarea>
                 </fieldset>
                 <!-- apply button use POST -->
             </fieldset>
@@ -150,22 +139,8 @@
         </section>
 
     </section>
-
-    <!-- Standard footer -->
     <footer>
-        <div class="footer-content">
-            <h3>Stay Connected</h3>
-            <p>Email our company if you have any questions:</p>
-            <a
-                href="mailto:100225609@student.swin.edu.au?cc=104300597@student.swin.edu.au;104548805@student.swin.edu.au;104584362@student.swin.edu.au;104567729@student.swin.edu.au">
-                Our company email
-            </a>
-        </div>
-        <div class="footer-bottom">
-            <p>&copy; 2023 SKP. All Rights Reserved.</p>
-        </div>
+        
     </footer>
-
 </body>
-
 </html>
