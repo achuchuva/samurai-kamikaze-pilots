@@ -13,8 +13,9 @@
 }
 
 @media(max-width: 700px) {
+
   /* When the checkbox is checked on the mobile view, expand the collapsible menu */
-  #navbar-checkbox:checked ~ nav {
+  #navbar-checkbox:checked~nav {
     padding: 0 0 0 10px;
     position: absolute;
     display: flex;
@@ -28,7 +29,7 @@
     z-index: 0;
   }
 
-  #navbar-checkbox:not(:checked) ~ nav {
+  #navbar-checkbox:not(:checked)~nav {
     display: none;
   }
 
@@ -53,7 +54,8 @@
 
   /* Shrink the group photo width */
   .about-info figure {
-    width: 300px;
+    float: none;
+    width: 70vw;
   }
 
   #secondary {
@@ -78,6 +80,10 @@
 
   #primary p {
     margin: 0;
+  }
+
+  .timetable-info {
+    display: none;
   }
 
 }
