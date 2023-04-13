@@ -17,13 +17,23 @@
     <section id="content">
         <h1>Apply for a job with SKP</h1>
         <h2>Which advertised job are you applying for today?</h2>
+        <label for="check">
+            Toggle
+        <input type="checkbox" id="check">
+        <p id="game">Game Developer Position</p>
+        <p id="designer">Game Designer Position</p>
         <!-- create internal page jumpto/hyperlinks to both forms -->
-        <section id="manager-pos">
+        <section id="job-pos">
             <!-- form heading -->
             <fieldset>
-                <legend>Game Programmer/Animator (Designer + Developer) Position Application</legend>
+                <legend id="game">Game Developer Position
+                </legend>
+                <legend id="manager">Game Designer Posititon</legend>
                 <br>
                 <!-- reference number 5 alphanum-->
+                <label for="reference">Please enter a reference number:</label>
+                <input type="text" name="reference" id="reference" required pattern[0-9a-zA-Z]{5}>
+                <br><br>
                 <fieldset>
                     <!-- personal info -->
                     <legend>Personal Details</legend>
@@ -93,11 +103,24 @@
                 <fieldset>
                     <legend>About You</legend>
                     <!-- skills info -->
-                    <p>Please select all of the following that apply to you:</p>
-                    <br><br>
+                    <p>Please select any of the following skills that you have:</p>
                     <!-- checkbox inputs checkbox r -->
+                    <label for="python">Python</label>
+                    <input type="checkbox" name="skills" id="python">
+                    <label for="javascript">JavaScript</label>
+                    <input type="checkbox" name="skills" id="javascript">
+                    <label for="C#">C#</label>
+                    <input type="checkbox" name="skills" id="C#">
+                    <label for="unity">Unity</label>
+                    <input type="checkbox" name="skills" id="unity">
+
                     <!-- other skills checkbox -->
+                    <br>
+                    <label for="otherskills">Other skills (please elaborate below)</label>
+                    <input type="checkbox" name="skills" id="otherskills" checked>
                     <!-- other skills textarea -->
+                    <br>
+                    <textarea rows="20" cols="70" name="skillsText">Tell us about yourself... Please mention any prior experience</textarea>
                 </fieldset>
                 <!-- apply button use POST -->
             </fieldset>
