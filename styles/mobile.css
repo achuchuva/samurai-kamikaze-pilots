@@ -16,7 +16,7 @@
 
   /* When the checkbox is checked on the mobile view, expand the collapsible menu */
   #navbar-checkbox:checked~nav {
-    padding: 0 0 0 10px;
+    padding: 30px 0 0 10px;
     position: absolute;
     display: flex;
     flex-direction: column;
@@ -33,6 +33,30 @@
     display: none;
   }
 
+  .navbar-button {
+    position: relative;
+    display: block;
+    z-index: 1;
+    top: 10px;
+    left: 10px;
+    width: 50px;
+    height: 50px;
+    background-color: #5e5e5e;
+    border-radius: 5px;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.5);
+    transition: all 0.3s ease-in-out;
+  }
+
+  .navbar-button:hover {
+    background-color: #999999;
+    box-shadow: 0px 6px 6px rgba(0, 0, 0, 0.5);
+    transform: translateY(-2px);
+  }
+
+  .navbar-button img {
+    width: 100%;
+  }
+
   nav a {
     display: block;
   }
@@ -40,16 +64,6 @@
   nav section {
     padding: 0;
     text-align: left;
-  }
-
-  #primary input {
-    position: relative;
-    display: block;
-    z-index: 1;
-    top: 10px;
-    left: 10px;
-    width: 30px;
-    height: 30px;
   }
 
   /* Shrink the group photo width */
