@@ -38,11 +38,9 @@
             <hr />
             <h2>Which advertised job are you applying for today?</h2>
             <!-- create internal page jumpto/hyperlinks to both forms -->
-            
-
             <section>
-                <a href="#manager-pos"><button>GAME ANIMATOR</button></a>
-                <a href="#manager-pos"><button>GAME PROGRAMMER</button></a>
+                <a href="#animator-pos"><button>GAME ANIMATOR</button></a>
+                <a href="#programmer-pos"><button>GAME PROGRAMMER</button></a>
             </section>
         </section>
 
@@ -50,10 +48,10 @@
 
     <section id="secondary">
 
-        <section id="manager-pos">
+        <section id="animator-pos">
             <!-- form heading -->
             <fieldset>
-                <legend>Game Programmer/Animator (Designer + Developer) Position Application</legend>
+                <legend>Game Animator Position Application</legend>
                 <!-- reference number 5 alphanum-->
                 <fieldset>
                     <!-- personal info -->
@@ -145,13 +143,150 @@
                     <p>Please select all of the following that apply to you:</p>
                     <br>
                     <!-- checkbox inputs checkbox r -->
+                    <label for="vector">Vector Drawing</label>
+                    <input type="checkbox" name="skills" id="vector">
+                    <label for="raster">Raster Drawing</label>
+                    <input type="checkbox" name="skills" id="raster">
+                    <label for="animation">Animation</label>
+                    <input type="checkbox" name="skills" id="animation">
+                    <label for="render">Three Dimensional Rendering</label>
+                    <input type="checkbox" name="skills" id="render">
+
                     <!-- other skills checkbox -->
+                    <br>
+                    <label for="otherskills">Other skills (please elaborate below)</label>
+                    <input type="checkbox" name="skills" id="otherskills" checked>
                     <!-- other skills textarea -->
+                    <br>
+                    <textarea rows="20" cols="70" name="skillsText">Tell us about yourself... Please mention any prior experience</textarea>
                 </fieldset>
                 <!-- apply button use POST -->
+                <form action="https://mercury.swin.edu.au/it000000/formtest.php" method="POST">Apply</form>
             </fieldset>
             <br>
         </section>
+
+
+        <section id="programmer-pos">
+            <!-- form heading -->
+            <fieldset>
+                <legend>Game Developer Position Application</legend>
+                <!-- reference number 5 alphanum-->
+                <fieldset>
+                    <!-- personal info -->
+                    <legend>Personal Details</legend>
+                    <!-- First text r -->
+                    <section class="formSection">
+                        <label for="givenName">Given Name</label>
+                        <input name="givenName" id="givenName" type="text" placeholder="Given name" required>
+                    </section>
+                    <!-- Last text r -->
+                    <section class="formSection">
+                        <label for="familyName">Family Name</label>
+                        <input name="familyName" id="familyName" type="text" placeholder="Family name" required>
+                        <br>
+                    </section>
+                    <!-- DOB date r -->
+                    <!-- Add DOB validation? for reference -> https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input/date -->
+                    <section class="formSection">
+                        <label for="birthdate">Date of Birth</label>
+                        <input name="birthdate" id="birthdate" type="date" required>
+                        <br>
+                    </section>
+                    <!-- gender radio r -->
+                    <section class="formSection">
+                        <label for="male" class="gender">Male</label>
+                        <input type="radio" name="gender" id="male" value="Male" required>
+                        <label for="female" class="gender">Female</label>
+                        <input type="radio" name="gender" id="female" value="Female">
+                        <label for="nonbinary" class="gender">Non-Binary</label>
+                        <input type="radio" name="gender" id="nonbinary" value="Non-Binary">
+                        <label for="other" class="gender">Prefer not to specify</label>
+                        <input type="radio" name="gender" id="other" value="Other">
+                        <br>
+                    </section>
+                </fieldset>
+                <fieldset>
+                    <legend>Locational Information</legend>
+                    <!-- address info -->
+                    <!-- street address text r -->
+                    <section class="formSection">
+                        <label for="street">Street address</label>
+                        <input type="text" name="street" id="street" required>
+                        <br>
+                    </section>
+                    <!-- suburb/town text r -->
+                    <section class="formSection">
+                        <label for="suburb">Suburb/Town</label>
+                        <input type="text" name="suburb" id="suburb" required>
+                        <br>
+                    </section>
+                    <!-- state dropdown r -->
+                    <section class="formSection">
+                        <label for="state">State</label>
+                        <select id="state" name="state" required>
+                            <option value="vic">Victoria</option>
+                            <option value="nsw">New South Whales</option>
+                            <option value="tas">Tasmania</option>
+                            <option value="sa">South Australia</option>
+                            <option value="wa">Western Australia</option>
+                            <option value="nt">Northern Territory</option>
+                            <option value="act">Australian Captial Territory</option>
+                        </select>
+                        <br>
+                    </section>
+                    <!-- postcode number r -->
+                    <section class="formSection">
+                        <label for="postcode">Postcode</label>
+                        <input type="number" name="postcode" id="postcode" pattern[0-9]{4} required>
+                    </section>
+                </fieldset>
+                <fieldset>
+                    <legend>Contact Information</legend>
+                    <!-- contact info -->
+                    <!-- email addess email r -->
+                    <section class="formSection">
+                        <label for="email">Email address</label>
+                        <input type="email" name="email" id="email" required>
+                        <br>
+                    </section>
+                    <!-- phone number r -->
+                    <section class="formSection">
+                        <label for="phoneNum">Phone number</label>
+                        <input type="text" name="phoneNum" id="phoneNum" pattern[0-9] required>
+                    </section>
+                </fieldset>
+                <fieldset>
+                    <legend>About You</legend>
+                    <!-- skills info -->
+                    <p>Please select all of the following that apply to you:</p>
+                    <br>
+                    <p>Please select all of the following that apply to you:</p>
+                    <br>
+                    <!-- checkbox inputs checkbox r -->
+                    <label for="python">Python</label>
+                    <input type="checkbox" name="skills" id="python">
+                    <label for="javascript">JavaScript</label>
+                    <input type="checkbox" name="skills" id="javascript">
+                    <label for="C#">C#</label>
+                    <input type="checkbox" name="skills" id="C#">
+                    <label for="unity">Unity</label>
+                    <input type="checkbox" name="skills" id="unity">
+
+                    <!-- other skills checkbox -->
+                    <br>
+                    <label for="otherskills">Other skills (please elaborate below)</label>
+                    <input type="checkbox" name="skills" id="otherskills" checked>
+                    <!-- other skills textarea -->
+                    <br>
+                    <textarea rows="20" cols="70" name="skillsText">Tell us about yourself... Please mention any prior experience</textarea>
+                </fieldset>
+                <!-- apply button use POST -->
+                <form action="https://mercury.swin.edu.au/it000000/formtest.php" method="POST">Apply</form>
+            </fieldset>
+            <br>
+        </section>
+
 
     </section>
     <footer>
