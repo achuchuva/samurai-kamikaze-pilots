@@ -73,12 +73,12 @@
                         <!-- First text r -->
                         <section class="form-section">
                             <label for="givenName">Given Name</label>
-                            <input name="givenName" id="givenName" type="text" placeholder="Given name" required>
+                            <input name="givenName" id="givenName" type="text" placeholder="Given name" maxlength="20" required>
                         </section>
                         <!-- Last text r -->
                         <section class="form-section">
                             <label for="familyName">Family Name</label>
-                            <input name="familyName" id="familyName" type="text" placeholder="Family name" required>
+                            <input name="familyName" id="familyName" type="text" placeholder="Family name" maxlength="20" required>
                             <br>
                         </section>
                         <!-- DOB date r -->
@@ -115,13 +115,13 @@
                         <!-- street address text r -->
                         <section class="form-section">
                             <label for="street">Street address</label>
-                            <input type="text" name="street" id="street" required>
+                            <input type="text" name="street" id="street" maxlength="40" required>
                             <br>
                         </section>
                         <!-- suburb/town text r -->
                         <section class="form-section">
                             <label for="suburb">Suburb/Town</label>
-                            <input type="text" name="suburb" id="suburb" required>
+                            <input type="text" name="suburb" id="suburb" maxlength="40" required>
                             <br>
                         </section>
                         <!-- state dropdown r -->
@@ -156,7 +156,8 @@
                         <!-- phone number r -->
                         <section class="form-section">
                             <label for="phoneNum">Phone number</label>
-                            <input type="text" name="phoneNum" id="phoneNum" pattern[0-9] required>
+                            <input type="number" name="phoneNum" id="phoneNum" 
+                            pattern="^\s*(?:\+?(\d{1,3}))?[-. (]*(\d{3})[-. )]*(\d{3})[-. ]*(\d{4})(?: *x(\d+))?\s*$" required>
                         </section>
                     </fieldset>
                     <fieldset>
@@ -219,12 +220,12 @@
                         <!-- First text r -->
                         <section class="form-section">
                             <label for="givenName">Given Name</label>
-                            <input name="givenName" id="givenName" type="text" placeholder="Given name" required>
+                            <input name="givenName" id="givenName" type="text" placeholder="Given name" maxlength="20" required>
                         </section>
                         <!-- Last text r -->
                         <section class="form-section">
                             <label for="familyName">Family Name</label>
-                            <input name="familyName" id="familyName" type="text" placeholder="Family name" required>
+                            <input name="familyName" id="familyName" type="text" placeholder="Family name" maxlength="20" required>
                             <br>
                         </section>
                         <!-- DOB date r -->
@@ -261,13 +262,13 @@
                         <!-- street address text r -->
                         <section class="form-section">
                             <label for="street">Street address</label>
-                            <input type="text" name="street" id="street" required>
+                            <input type="text" name="street" id="street" maxlength="40" required>
                             <br>
                         </section>
                         <!-- suburb/town text r -->
                         <section class="form-section">
                             <label for="suburb">Suburb/Town</label>
-                            <input type="text" name="suburb" id="suburb" required>
+                            <input type="text" name="suburb" id="suburb" maxlength="40" required>
                             <br>
                         </section>
                         <!-- state dropdown r -->
@@ -302,7 +303,8 @@
                         <!-- phone number r -->
                         <section class="form-section">
                             <label for="phoneNum">Phone number</label>
-                            <input type="text" name="phoneNum" id="phoneNum" pattern[0-9] required>
+                            <input type="text" name="phoneNum" id="phoneNum"
+                            pattern="^\s*(?:\+?(\d{1,3}))?[-. (]*(\d{3})[-. )]*(\d{3})[-. ]*(\d{4})(?: *x(\d+))?\s*$" required>
                         </section>
                     </fieldset>
                     <fieldset>

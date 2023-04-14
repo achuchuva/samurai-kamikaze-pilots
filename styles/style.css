@@ -82,6 +82,7 @@ nav section {
 #primary button {
   padding: 10px;
   margin-right: 10px;
+  /* Make gradient background for button */
   background-image: linear-gradient(rgba(47, 47, 59, 0.4), rgba(47, 47, 59, 0.7));
   background-color: rgba(0, 0, 0, 0);
   border-radius: 10px;
@@ -112,6 +113,7 @@ nav section {
 aside {
   float: right;
   width: 25vw;
+  /* Make gradient background for aside */
   background-image: linear-gradient(rgba(47, 47, 59, 0.4), rgba(47, 47, 59, 0.7));
   margin: 50px 16vw 50px 50px;
   height: calc(60vh);
@@ -317,6 +319,7 @@ ul {
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 }
 
+/* Restyle the input button */
 #secondary input[type="submit"] {
   margin-top: 10px;
   padding: 10px 20px;
@@ -335,6 +338,7 @@ ul {
   transform: translateY(-2px);
 }
 
+/* Custom select dropdown */
 #secondary select {
   background: url(../images/dropdown.png) no-repeat right white;
   padding-left: 4px;
