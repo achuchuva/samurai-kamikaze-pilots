@@ -30,8 +30,8 @@ nav a {
 }
 
 nav a:hover {
-  text-decoration-color: #CC3300;
-  color: #CC3300;
+  text-decoration-color: #EE3300;
+  color: #EE3300;
 }
 
 nav section {
@@ -99,7 +99,7 @@ nav section {
 }
 
 #primary button:hover {
-  color: #CC3300;
+  color: #EE3300;
   border-color: #DFE4E7;
 }
 
@@ -441,7 +441,7 @@ footer a:hover {
 
 /* Miscellaneous */
 .red-font {
-  color: red;
+    color: #EE3300;
 }
 
 .centered {
