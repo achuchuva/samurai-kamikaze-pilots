@@ -365,7 +365,7 @@ figure {
 }
 
 figure img {
-  border: 5px solid;
+  border: 5px #DFE4E7 solid;
   width: 100%;
   height: auto;
 }
