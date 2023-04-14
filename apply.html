@@ -85,7 +85,7 @@
                         <!-- Add DOB validation? for reference -> https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input/date -->
                         <section class="form-section">
                             <label for="birthdate">Date of Birth</label>
-                            <input name="birthdate" id="birthdate" type="date" required>
+                            <input name="birthdate" id="birthdate" type="date" min="1900-01-01" max="2023-01-01" required>
                             <br>
                         </section>
                         <!-- gender radio r -->
@@ -167,15 +167,15 @@
                         <!-- checkbox inputs checkbox r -->
                         <label for="vector">
                             <input type="checkbox" name="skills" id="vector">
-                            Vector Drawing
+                            <div>Vector Drawing</div>
                         </label>
                         <label for="raster">
                             <input type="checkbox" name="skills" id="raster">
-                            Raster Drawing
+                            <div>Raster Drawing</div>
                         </label>
                         <label for="animation">
                             <input type="checkbox" name="skills" id="animation">
-                            Animation
+                            <div>Animation</div>
                         </label>
                         <label for="render">
                             <input type="checkbox" name="skills" id="render">
@@ -185,7 +185,7 @@
                         <!-- other skills checkbox -->
                         <label for="otherskills">
                             <input type="checkbox" name="skills" id="otherskills" checked>
-                            Other skills (please elaborate below)
+                            <div>Other skills (please elaborate below)</div>
                         </label>
                         <!-- other skills textarea -->
                         <br>
@@ -231,7 +231,7 @@
                         <!-- Add DOB validation? for reference -> https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input/date -->
                         <section class="form-section">
                             <label for="birthdate">Date of Birth</label>
-                            <input name="birthdate" id="birthdate" type="date" required>
+                            <input name="birthdate" id="birthdate" type="date" min="1900-01-01" max="2023-01-01" required>
                             <br>
                         </section>
                         <!-- gender radio r -->
