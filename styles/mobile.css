@@ -1,3 +1,4 @@
+/* Styling only applied below 1400px screen width */
 @media(max-width: 1400px) {
   .index-content {
     display: block;
@@ -12,6 +13,7 @@
   }
 }
 
+/* Styling only applied below 1400px screen width */
 @media(max-width: 700px) {
 
   /* When the checkbox is checked on the mobile view, expand the collapsible menu */
@@ -28,6 +30,11 @@
     /* Z-index used to place checkbox above collapsed nav */
     z-index: 0;
   }
+  
+  /* Close the navbar when unchecked */
+  #navbar-checkbox:not(:checked)~nav {
+    display: none;
+  }
 
   /* Shift the logo to the right */
   .logo {
@@ -35,10 +42,7 @@
     right: calc(1vh + 16px);
   }
 
-  #navbar-checkbox:not(:checked)~nav {
-    display: none;
-  }
-
+  /* Apply custom styling for the icon to make it look like a button */
   .navbar-button {
     position: relative;
     display: block;
@@ -78,6 +82,7 @@
     width: 70vw;
   }
 
+  /* Apply minor padding, margin and width changes as screen shrinks */
   #secondary {
     padding: 32px 4vw 32px 4vw;
   }

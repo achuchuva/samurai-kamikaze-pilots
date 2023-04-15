@@ -18,6 +18,7 @@ Authors William and Anton Chuchuva*/
 .logo {
   width: 75px;
   position: absolute;
+  /* Adding 1 viewport height and 16px together dynamically */
   top: calc(1vh + 16px);
   left: calc(1vh + 16px);
 }
@@ -38,6 +39,7 @@ nav a {
   text-underline-offset: 20px;
   text-decoration-thickness: 1px;
   text-decoration-color: #DFE4E7;
+  /* Animation easing for clean look */
   transition: 0.2s ease-in-out;
 }
 
@@ -51,6 +53,7 @@ nav div {
   background-color: rgba(223, 228, 231, 0);
   width: 120px;
   border-radius: 10px;
+  /* Animation easing for clean look */
   transition: 0.2s ease-in-out;
 }
 
@@ -104,6 +107,7 @@ nav div {
   border: 1px solid rgba(166, 166, 166, 0.7);
   border-radius: 10px;
   color: #DFE4E7;
+  /* Animation easing for clean look */
   transition: 0.2s ease-in-out;
 }
 
@@ -323,6 +327,7 @@ ul, ol {
   margin-left: 8px;
 }
 
+/* Style inputs with specific types */
 #secondary input[type="checkbox"],
 #secondary input[type="radio"] {
   width: 20px;
