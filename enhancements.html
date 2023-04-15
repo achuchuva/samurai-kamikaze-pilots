@@ -14,41 +14,110 @@
 
 <body>
 
-    <section id="primary">
+    <div id="primary">
         <!-- Welcome messages -->
 
         <input type="checkbox" id="navbar-checkbox" />
         <label for="navbar-checkbox" class="navbar-button">
-            <img src="images/hamburger-icon.png">
+            <img src="images/hamburger-icon.png" alt="Hamburger Icon">
         </label>
 
-        <nav>
+        
+        <nav id="top">
             <a href="index.html">
-                <section> <img src="SKPLogo.png" alt="">HOME </section>
+                <div><img class="logo" src="./images/SKPLogo.png" alt="HOME"> HOME </div>
             </a>
             <a href="jobs.html">
-                <section> JOBS </section>
+                <div> JOBS </div>
             </a>
             <a href="apply.html">
-                <section> APPLY </section>
+                <div> APPLY </div>
             </a>
             <a href="about.html">
-                <section> ABOUT </section>
+                <div> ABOUT </div>
             </a>
             <a href="enhancements.html">
-                <section> ENHANCEMENTS </section>
+                <div> ENHANCEMENTS </div>
             </a>
         </nav>
 
         <section class="content">
             <h1>Enhancements</h1>
             <hr />
+            <br>
+            <div>
+                <a class="button" href="#image-map">
+                    THE IMAGE MAP
+                </a>
+                <a class="button" href="#collapsible-menu">
+                    COLLAPSIBLE MENU
+                </a>
+            </div>
         </section>
 
-    </section>
+    </div>
 
     <section id="secondary">
-
+        <div id="image-map">
+            <h2>The Image Map</h2>
+            <p>
+                <a href="./about.html">Link to the enhancement</a>
+            </p>
+            <h3>What is it</h3>
+            <p>
+                This feature allows certain areas of an image to become clickable and essentially behave as &lt;a&gt;
+                tags. In this case the image map was used to make the faces of members of our group to be clickable and
+                upon interaction scroll the user to the individual description of the group member.
+            </p>
+            <h3>Going beyond basic requirements</h3>
+            <p>
+                This custom navigation increases the interactivity and usability of the website by providing a flexible
+                way to create interactive and engaging user interfaces. With the image map users have another way to
+                navigate around the lengthy About page that may be easier and more intuitive especially on mobile
+                devices where scrolling is not always made apparent by the website.
+            </p>
+            <h3>The code involved</h3>
+            <p>
+                Adding a usemap atrribute to an image enables it to be manipulated by the HTML map element. Inside the
+                map tags are area elements which specify the type of the shape the clickable area is, its coordinates in
+                pixels relative to the image size and a href attribute that links that area to a separate page or an
+                element on the current page.
+            </p>
+            <h3>References</h3>
+            <p>
+                <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/map">The Image Map element - HTML:
+                    HyperText Markup Language</a>
+            </p>
+        </div>
+        <div id="collapsible-menu">
+            <h2>Collapsible Menu</h2>
+            <p>
+                <a href="#top">Link to the enhancement</a>
+            </p>
+            <h3>What is it</h3>
+            <p>
+                The collapsible menu appears after the screen width shrinks below 700px as a hamburger menu icon that
+                can be pressed to unravel the nav bar in a compressed format.
+            </p>
+            <h3>Going beyond basic requirements</h3>
+            <p>
+                This feature was implemented entirely using CSS and goes beyond simply adding reflow to the page. The
+                collapsible menu caters towards mobile users specifically where the dropdown format of the nav bar not
+                only looks visually more appealing but also is typically the expected format of menus on devices with a
+                small screen width.
+            </p>
+            <h3>The code involved</h3>
+            <p>
+                Media queries used on a separate CSS file (mobile.css) allow the menu to only appear at a certain screen
+                width threshold. Selectors for the nav bar restyle the menu to instead be in columns and only have
+                visible display when the user has toggled the button and disabled when the user closes the menu.
+            </p>
+            <h3>References</h3>
+            <p>
+                <a href="https://www.w3schools.com/howto/howto_js_collapse_sidebar.asp">How To Create a Collapsed
+                    Sidebar</a>
+            </p>
+        </div>
 
     </section>
 
