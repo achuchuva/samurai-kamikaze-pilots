@@ -14,6 +14,14 @@ Authors William and Anton Chuchuva*/
   scroll-behavior: smooth;
 }
 
+/* Logo styling */
+.logo {
+  width: 75px;
+  position: absolute;
+  top: calc(1vh + 16px);
+  left: calc(1vh + 16px);
+}
+
 /* Nav styling */
 
 nav {
@@ -44,12 +52,6 @@ nav div {
   width: 120px;
   border-radius: 10px;
   transition: 0.2s ease-in-out;
-  display: flex;
-  justify-content: center;
-}
-
-nav img {
-  width: 60px;
 }
 
 /* By defualt hide the checkbox for the collapsible menu */

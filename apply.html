@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="keywords" content="HTML, CSS">
     <meta name="description" content="Apply for work with SKP Secret Key Productions">
     <meta name="author" content="Amelie Kercher">
     <link rel="stylesheet" href="styles/style.css">
@@ -21,9 +22,11 @@
             <img src="images/hamburger-icon.png" alt="Hamburger Icon">
         </label>
 
+        <img src="./images/SKPLogo.png" class="logo" alt="HOME">
+
         <nav>
             <a href="index.html">
-                <div> <img src="./images/SKPLogo.png" alt="HOME">HOME </div>
+                <div> HOME </div>
             </a>
             <a href="jobs.html">
                 <div> JOBS </div>
@@ -43,7 +46,7 @@
             <h1>Apply for a job with SKP</h1>
             <hr>
             <h3>Which advertised job are you applying for today?</h3>
-            <!-- create internal page jumpto/hyperlinks to both forms -->
+            <!-- Create internal page jumpto/hyperlinks to both forms -->
             <div>
                 <a class="button" href="#animator-pos">
                     GAME ANIMATOR
@@ -65,7 +68,7 @@
             <form action="https://mercury.swin.edu.au/it000000/formtest.php" method="post">
                 <fieldset>
                     <legend>Game Animator Position Application</legend>
-                    <!-- reference number 5 alphanum-->
+                    <!-- Reference number 5 alphanum-->
                     <fieldset>
                         <legend>Job reference number</legend>
                         <div class="form-section">
@@ -75,30 +78,30 @@
                         </div>
                     </fieldset>
                     <fieldset>
-                        <!-- personal info -->
+                        <!-- Personal info -->
                         <legend>Personal Details</legend>
-                        <!-- First text r -->
+                        <!-- First name -->
                         <div class="form-section">
                             <label for="a-given-name">Given Name</label>
                             <input name="given-name" id="a-given-name" type="text" placeholder="Given name"
                                 maxlength="20" required>
                         </div>
-                        <!-- Last text r -->
+                        <!-- Last name -->
                         <div class="form-section">
                             <label for="a-family-name">Family Name</label>
                             <input name="family-name" id="a-family-name" type="text" placeholder="Family name"
                                 maxlength="20" required>
                             <br>
                         </div>
-                        <!-- DOB date r -->
-                        <!-- Add DOB validation? for reference -> https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input/date -->
+                        <!-- DOB date -->
+                        <!-- DOB validation-> https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input/date -->
                         <div class="form-section">
                             <label for="a-birthdate">Date of Birth</label>
                             <input name="birthdate" id="a-birthdate" type="date" min="1900-01-01" max="2023-01-01"
                                 required>
                             <br>
                         </div>
-                        <!-- gender radio r -->
+                        <!-- Gender radio -->
                         <div class="form-section">
                             <label for="a-male" class="gender">
                                 <input type="radio" name="gender" id="a-male" value="Male" required checked>
@@ -121,20 +124,20 @@
                     </fieldset>
                     <fieldset>
                         <legend>Locational Information</legend>
-                        <!-- address info -->
-                        <!-- street address text r -->
+                        <!-- Address info -->
+                        <!-- Street address -->
                         <div class="form-section">
                             <label for="a-street">Street address</label>
                             <input type="text" name="street" id="a-street" maxlength="40" required>
                             <br>
                         </div>
-                        <!-- suburb/town text r -->
+                        <!-- Suburb/town -->
                         <div class="form-section">
                             <label for="a-suburb">Suburb/Town</label>
                             <input type="text" name="suburb" id="a-suburb" maxlength="40" required>
                             <br>
                         </div>
-                        <!-- state dropdown r -->
+                        <!-- State dropdown -->
                         <div class="form-section">
                             <label for="a-state">State</label>
                             <select id="a-state" name="state" required>
@@ -149,7 +152,7 @@
                             </select>
                             <br>
                         </div>
-                        <!-- postcode number r -->
+                        <!-- Postcode number -->
                         <div class="form-section">
                             <label for="a-postcode">Postcode</label>
                             <input type="text" name="postcode" id="a-postcode" pattern="[0-9]{4}" required>
@@ -157,14 +160,14 @@
                     </fieldset>
                     <fieldset>
                         <legend>Contact Information</legend>
-                        <!-- contact info -->
-                        <!-- email addess email r -->
+                        <!-- Contact info -->
+                        <!-- Email address email -->
                         <div class="form-section">
                             <label for="a-email">Email address</label>
                             <input type="email" name="email" id="a-email" required>
                             <br>
                         </div>
-                        <!-- phone number r -->
+                        <!-- Phone number -->
                         <div class="form-section">
                             <label for="a-phone-num">Phone number</label>
                             <input type="text" name="phone-num" id="a-phone-num"
@@ -174,10 +177,10 @@
                     </fieldset>
                     <fieldset>
                         <legend>About You</legend>
-                        <!-- skills info -->
+                        <!-- Skills info -->
                         <p>Please select all of the following that apply to you:</p>
                         <br>
-                        <!-- checkbox inputs checkbox r -->
+                        <!-- Checkbox inputs checkbox -->
                         <label for="a-vector">
                             <input type="checkbox" name="vector" id="a-vector">
                             Vector Drawing
@@ -195,17 +198,17 @@
                             Three Dimensional Rendering
                         </label>
 
-                        <!-- other skills checkbox -->
+                        <!-- Other skills checkbox -->
                         <label for="a-otherskills">
                             <input type="checkbox" name="skills" id="a-otherskills" checked>
                             Other skills (please elaborate below)
                         </label>
-                        <!-- other skills textarea -->
+                        <!-- Other skills textarea -->
                         <br>
                         <textarea rows="20" cols="70" name="skills-text"
                             placeholder="Tell us about yourself... Please mention any prior experience"></textarea>
                     </fieldset>
-                    <!-- apply button use POST -->
+                    <!-- Apply button use POST -->
                     <input type="submit" value="Apply">
                 </fieldset>
             </form>
@@ -218,7 +221,7 @@
             <form action="https://mercury.swin.edu.au/it000000/formtest.php" method="post">
                 <fieldset>
                     <legend>Game Programmer Position Application</legend>
-                    <!-- reference number 5 alphanum-->
+                    <!-- Reference number 5 alphanum-->
                     <fieldset>
                         <legend>Job reference number</legend>
                         <div class="form-section">
@@ -228,30 +231,30 @@
                         </div>
                     </fieldset>
                     <fieldset>
-                        <!-- personal info -->
+                        <!-- Personal info -->
                         <legend>Personal Details</legend>
-                        <!-- First text r -->
+                        <!-- First name -->
                         <div class="form-section">
                             <label for="p-given-name">Given Name</label>
                             <input name="given-name" id="p-given-name" type="text" placeholder="Given name"
                                 maxlength="20" required>
                         </div>
-                        <!-- Last text r -->
+                        <!-- Last name -->
                         <div class="form-section">
                             <label for="p-family-name">Family Name</label>
                             <input name="family-name" id="p-family-name" type="text" placeholder="Family name"
                                 maxlength="20" required>
                             <br>
                         </div>
-                        <!-- DOB date r -->
-                        <!-- Add DOB validation? for reference -> https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input/date -->
+                        <!-- DOB date -->
+                        <!-- DOB validation -> https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input/date -->
                         <div class="form-section">
                             <label for="p-birthdate">Date of Birth</label>
                             <input name="birthdate" id="p-birthdate" type="date" min="1900-01-01" max="2023-01-01"
                                 required>
                             <br>
                         </div>
-                        <!-- gender radio r -->
+                        <!-- Gender radio -->
                         <div class="form-section">
                             <label for="p-male" class="gender">
                                 <input type="radio" name="gender" id="p-male" value="Male" required checked>
@@ -274,20 +277,20 @@
                     </fieldset>
                     <fieldset>
                         <legend>Locational Information</legend>
-                        <!-- address info -->
-                        <!-- street address text r -->
+                        <!-- Address info -->
+                        <!-- Street address -->
                         <div class="form-section">
                             <label for="p-street">Street address</label>
                             <input type="text" name="street" id="p-street" maxlength="40" required>
                             <br>
                         </div>
-                        <!-- suburb/town text r -->
+                        <!-- Suburb/town -->
                         <div class="form-section">
                             <label for="p-suburb">Suburb/Town</label>
                             <input type="text" name="suburb" id="p-suburb" maxlength="40" required>
                             <br>
                         </div>
-                        <!-- state dropdown r -->
+                        <!-- State dropdown -->
                         <div class="form-section">
                             <label for="p-state">State</label>
                             <select id="p-state" name="state" required>
@@ -302,7 +305,7 @@
                             </select>
                             <br>
                         </div>
-                        <!-- postcode number r -->
+                        <!-- Postcode number -->
                         <div class="form-section">
                             <label for="p-postcode">Postcode</label>
                             <input type="text" name="postcode" id="p-postcode" pattern="[0-9]{4}" required>
@@ -310,14 +313,14 @@
                     </fieldset>
                     <fieldset>
                         <legend>Contact Information</legend>
-                        <!-- contact info -->
-                        <!-- email addess email r -->
+                        <!-- Contact info -->
+                        <!-- Email address email -->
                         <div class="form-section">
                             <label for="p-email">Email address</label>
                             <input type="email" name="email" id="p-email" required>
                             <br>
                         </div>
-                        <!-- phone number r -->
+                        <!-- Phone number -->
                         <div class="form-section">
                             <label for="p-phone-num">Phone number</label>
                             <input type="text" name="phoneNum" id="p-phone-num"
@@ -327,10 +330,10 @@
                     </fieldset>
                     <fieldset>
                         <legend>About You</legend>
-                        <!-- skills info -->
+                        <!-- Skills info -->
                         <p>Please select all of the following that apply to you:</p>
                         <br>
-                        <!-- checkbox inputs checkbox r -->
+                        <!-- Checkbox inputs checkbox -->
                         <label for="p-python">
                             <input type="checkbox" name="python" id="p-python">
                             Python
@@ -348,17 +351,17 @@
                             Unity
                         </label>
 
-                        <!-- other skills checkbox -->
+                        <!-- Other skills checkbox -->
                         <label for="p-otherskills">
                             <input type="checkbox" name="skills" id="p-otherskills" checked>
                             Other skills (please elaborate below)
                         </label>
-                        <!-- other skills textarea -->
+                        <!-- Other skills textarea -->
                         <br>
                         <textarea rows="20" cols="70" name="skills-text"
                             placeholder="Tell us about yourself... Please mention any prior experience"></textarea>
                     </fieldset>
-                    <!-- apply button use POST -->
+                    <!-- Apply button use POST -->
                     <input type="submit" value="Apply">
                 </fieldset>
             </form>

@@ -29,6 +29,12 @@
     z-index: 0;
   }
 
+  /* Shift the logo to the right */
+  .logo {
+    left: auto;
+    right: calc(1vh + 16px);
+  }
+
   #navbar-checkbox:not(:checked)~nav {
     display: none;
   }
