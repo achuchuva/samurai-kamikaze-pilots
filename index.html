@@ -5,75 +5,85 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Landing page for SKP Secret Key Productions" />
-    <meta name="author" content="Devarsh" />
-    <link rel="stylesheet" href="styles/style.css" />
-    <link rel="stylesheet" href="styles/mobile.css" />
+    <meta name="keywords" content="HTML, CSS">
+    <meta name="description" content="Landing page for SKP Secret Key Productions">
+    <meta name="author" content="Devarsh">
+    <link rel="stylesheet" href="styles/style.css">
+    <link rel="stylesheet" href="styles/mobile.css">
     <title>SKP - Home</title>
 </head>
 
 <body>
 
-    <section id="primary">
+    <div id="primary">
         <!-- Welcome messages -->
 
-        <input type="checkbox" id="navbar-checkbox" />
+        <input type="checkbox" id="navbar-checkbox">
         <label for="navbar-checkbox" class="navbar-button">
-            <img src="images/hamburger-icon.png">
+            <img src="images/hamburger-icon.png" alt="Hamburger Icon">
         </label>
+
+        <img src="./images/SKPLogo.png" class="logo" alt="HOME">
 
         <nav>
             <a href="index.html">
-                <section> <img src="SKPLogo.png" alt="">HOME </section>
+                <div> HOME </div>
             </a>
             <a href="jobs.html">
-                <section> JOBS </section>
+                <div> JOBS </div>
             </a>
             <a href="apply.html">
-                <section> APPLY </section>
+                <div> APPLY </div>
             </a>
             <a href="about.html">
-                <section> ABOUT </section>
+                <div> ABOUT </div>
             </a>
             <a href="enhancements.html">
-                <section> ENHANCEMENTS </section>
+                <div> ENHANCEMENTS </div>
             </a>
         </nav>
 
-        <section class="index-content">
+        <!-- Index section -->
+        <div class="index-content">
             <section>
-                <h1><strong>
+                <h2>
+                    <strong>
                         Secret <br>
-                        <span class="red-font">Key</span> <br>
+                        Key <br>
                         Productions
-                </h1></strong>
+                    </strong>
+                </h2>
 
                 <br>
 
                 <p>
                     Welcome to our website! We are thrilled that you have decided to apply for a position with
-                    us. Head on over to our "APPLY" section which is designed to make the application process for potential game programmers
-                    and animators as smooth and simple as possible, so that you can easily 
+                    us. Head on over to our "APPLY" section which is designed to make the application process for
+                    potential game programmers
+                    and animators as smooth and simple as possible, so that you can easily
                     submit your information and be considered for a position with our company.
                 </p>
                 <p>
-                    If you are wondering who specifically we are looking to hire, you'll find information in the "JOBS" section.
+                    If you are wondering who specifically we are looking to hire, you'll find information in the "JOBS"
+                    section.
                     We value our employees and are always looking for talented individuals to join our team.
                 </p>
                 <p>
                     Thank you for considering us as your potential employer and we look forward to reviewing
                     your application.
                 </p>
-
-                <a href="#footer"><button>REACH OUT</button></a>
+                <br>
+                <a class="button" href="#footer">
+                    REACH OUT
+                </a>
             </section>
 
             <figure>
-                <img src="images/home-page.jpeg">
+                <img src="images/home-page.jpeg" alt="Welcome page image">
                 <figcaption>Find your dream career with SKP!</figcaption>
             </figure>
-        </section>
-    </section>
+        </div>
+    </div>
 
     <!-- Standard footer -->
     <footer id="footer">

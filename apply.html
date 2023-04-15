@@ -5,129 +5,143 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Apply for work with SKP Secret Key Productions" />
-    <meta name="author" content="Amelie Kercher" />
-    <link rel="stylesheet" href="styles/style.css" />
-    <link rel="stylesheet" href="styles/mobile.css" />
+    <meta name="keywords" content="HTML, CSS">
+    <meta name="description" content="Apply for work with SKP Secret Key Productions">
+    <meta name="author" content="Amelie Kercher">
+    <link rel="stylesheet" href="styles/style.css">
+    <link rel="stylesheet" href="styles/mobile.css">
     <title>SKP - Apply</title>
 </head>
 
 <body>
 
-    <section id="primary">
+    <div id="primary">
 
-        <input type="checkbox" id="navbar-checkbox" />
+        <input type="checkbox" id="navbar-checkbox">
         <label for="navbar-checkbox" class="navbar-button">
-            <img src="images/hamburger-icon.png">
+            <img src="images/hamburger-icon.png" alt="Hamburger Icon">
         </label>
+
+        <img src="./images/SKPLogo.png" class="logo" alt="HOME">
 
         <nav>
             <a href="index.html">
-                <section> <img src="SKPLogo.png" alt="">HOME </section>
+                <div> HOME </div>
             </a>
             <a href="jobs.html">
-                <section> JOBS </section>
+                <div> JOBS </div>
             </a>
             <a href="apply.html">
-                <section> APPLY </section>
+                <div> APPLY </div>
             </a>
             <a href="about.html">
-                <section> ABOUT </section>
+                <div> ABOUT </div>
             </a>
             <a href="enhancements.html">
-                <section> ENHANCEMENTS </section>
+                <div> ENHANCEMENTS </div>
             </a>
         </nav>
 
         <section class="content">
-            <h1><span class="red-font">Apply</span> for a job with SKP</h1>
-            <hr />
-            <h2>Which advertised job are you applying for today?</h2>
-            <!-- create internal page jumpto/hyperlinks to both forms -->
-            <section>
-                <a href="#animator-pos"><button>GAME ANIMATOR</button></a>
-                <a href="#programmer-pos"><button>GAME PROGRAMMER</button></a>
-            </section>
+            <h1>Apply for a job with SKP</h1>
+            <hr>
+            <h3>Which advertised job are you applying for today?</h3>
+            <!-- Create internal page jumpto/hyperlinks to both forms -->
+            <div>
+                <a class="button" href="#animator-pos">
+                    GAME ANIMATOR
+                </a>
+                <a class="button" href="#programmer-pos">
+                    GAME PROGRAMMER
+                </a>
+            </div>
         </section>
 
-    </section>
+    </div>
 
     <section id="secondary">
 
-        <section id="animator-pos">
+        <h1>Apply Today</h1>
+
+        <div id="animator-pos">
             <!-- Form heading -->
             <form action="https://mercury.swin.edu.au/it000000/formtest.php" method="post">
                 <fieldset>
                     <legend>Game Animator Position Application</legend>
-                    <!-- reference number 5 alphanum-->
+                    <!-- Reference number 5 alphanum-->
                     <fieldset>
                         <legend>Job reference number</legend>
-                        <section class="form-section">
-                            <label for="reference-number">Number</label>
-                            <input type="number" name="reference-number" id="reference-number" pattern[0-9]{5} required>
-                        </section>
+                        <div class="form-section">
+                            <label for="a-reference-number">Number</label>
+                            <input type="text" name="reference-number" id="a-reference-number" pattern="[0-9]{5}"
+                                required>
+                        </div>
                     </fieldset>
                     <fieldset>
-                        <!-- personal info -->
+                        <!-- Personal info -->
                         <legend>Personal Details</legend>
-                        <!-- First text r -->
-                        <section class="form-section">
-                            <label for="givenName">Given Name</label>
-                            <input name="givenName" id="givenName" type="text" placeholder="Given name" required>
-                        </section>
-                        <!-- Last text r -->
-                        <section class="form-section">
-                            <label for="familyName">Family Name</label>
-                            <input name="familyName" id="familyName" type="text" placeholder="Family name" required>
+                        <!-- First name -->
+                        <div class="form-section">
+                            <label for="a-given-name">Given Name</label>
+                            <input name="given-name" id="a-given-name" type="text" placeholder="Given name"
+                                maxlength="20" required>
+                        </div>
+                        <!-- Last name -->
+                        <div class="form-section">
+                            <label for="a-family-name">Family Name</label>
+                            <input name="family-name" id="a-family-name" type="text" placeholder="Family name"
+                                maxlength="20" required>
                             <br>
-                        </section>
-                        <!-- DOB date r -->
-                        <!-- Add DOB validation? for reference -> https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input/date -->
-                        <section class="form-section">
-                            <label for="birthdate">Date of Birth</label>
-                            <input name="birthdate" id="birthdate" type="date" required>
+                        </div>
+                        <!-- DOB date -->
+                        <!-- DOB validation-> https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input/date -->
+                        <div class="form-section">
+                            <label for="a-birthdate">Date of Birth</label>
+                            <input name="birthdate" id="a-birthdate" type="date" min="1900-01-01" max="2023-01-01"
+                                required>
                             <br>
-                        </section>
-                        <!-- gender radio r -->
-                        <section class="form-section">
-                            <label for="male" class="gender">
-                                <input type="radio" name="gender" id="male" value="Male" required>
+                        </div>
+                        <!-- Gender radio -->
+                        <div class="form-section">
+                            <label for="a-male" class="gender">
+                                <input type="radio" name="gender" id="a-male" value="Male" required checked>
                                 Male
                             </label>
-                            <label for="female" class="gender">
-                                <input type="radio" name="gender" id="female" value="Female">
+                            <label for="a-female" class="gender">
+                                <input type="radio" name="gender" id="a-female" value="Female">
                                 Female
                             </label>
-                            <label for="nonbinary" class="gender">
-                                <input type="radio" name="gender" id="nonbinary" value="Non-Binary">
+                            <label for="a-nonbinary" class="gender">
+                                <input type="radio" name="gender" id="a-nonbinary" value="Non-Binary">
                                 Non-Binary
                             </label>
-                            <label for="other" class="gender">
-                                <input type="radio" name="gender" id="other" value="Other">
+                            <label for="a-other" class="gender">
+                                <input type="radio" name="gender" id="a-other" value="Other">
                                 Prefer not to specify
                             </label>
                             <br>
-                        </section>
+                        </div>
                     </fieldset>
                     <fieldset>
                         <legend>Locational Information</legend>
-                        <!-- address info -->
-                        <!-- street address text r -->
-                        <section class="form-section">
-                            <label for="street">Street address</label>
-                            <input type="text" name="street" id="street" required>
+                        <!-- Address info -->
+                        <!-- Street address -->
+                        <div class="form-section">
+                            <label for="a-street">Street address</label>
+                            <input type="text" name="street" id="a-street" maxlength="40" required>
                             <br>
-                        </section>
-                        <!-- suburb/town text r -->
-                        <section class="form-section">
-                            <label for="suburb">Suburb/Town</label>
-                            <input type="text" name="suburb" id="suburb" required>
+                        </div>
+                        <!-- Suburb/town -->
+                        <div class="form-section">
+                            <label for="a-suburb">Suburb/Town</label>
+                            <input type="text" name="suburb" id="a-suburb" maxlength="40" required>
                             <br>
-                        </section>
-                        <!-- state dropdown r -->
-                        <section class="form-section">
-                            <label for="state">State</label>
-                            <select id="state" name="state" required>
+                        </div>
+                        <!-- State dropdown -->
+                        <div class="form-section">
+                            <label for="a-state">State</label>
+                            <select id="a-state" name="state" required>
+                                <option value="" disabled selected>Select your option</option>
                                 <option value="vic">Victoria</option>
                                 <option value="nsw">New South Whales</option>
                                 <option value="tas">Tasmania</option>
@@ -137,143 +151,150 @@
                                 <option value="act">Australian Captial Territory</option>
                             </select>
                             <br>
-                        </section>
-                        <!-- postcode number r -->
-                        <section class="form-section">
-                            <label for="postcode">Postcode</label>
-                            <input type="number" name="postcode" id="postcode" pattern[0-9]{4} required>
-                        </section>
+                        </div>
+                        <!-- Postcode number -->
+                        <div class="form-section">
+                            <label for="a-postcode">Postcode</label>
+                            <input type="text" name="postcode" id="a-postcode" pattern="[0-9]{4}" required>
+                        </div>
                     </fieldset>
                     <fieldset>
                         <legend>Contact Information</legend>
-                        <!-- contact info -->
-                        <!-- email addess email r -->
-                        <section class="form-section">
-                            <label for="email">Email address</label>
-                            <input type="email" name="email" id="email" required>
+                        <!-- Contact info -->
+                        <!-- Email address email -->
+                        <div class="form-section">
+                            <label for="a-email">Email address</label>
+                            <input type="email" name="email" id="a-email" required>
                             <br>
-                        </section>
-                        <!-- phone number r -->
-                        <section class="form-section">
-                            <label for="phoneNum">Phone number</label>
-                            <input type="text" name="phoneNum" id="phoneNum" pattern[0-9] required>
-                        </section>
+                        </div>
+                        <!-- Phone number -->
+                        <div class="form-section">
+                            <label for="a-phone-num">Phone number</label>
+                            <input type="text" name="phone-num" id="a-phone-num"
+                                pattern="^\s*(?:\+?(\d{1,3}))?[-. (]*(\d{3})[-. )]*(\d{3})[-. ]*(\d{4})(?: *x(\d+))?\s*$"
+                                required>
+                        </div>
                     </fieldset>
                     <fieldset>
                         <legend>About You</legend>
-                        <!-- skills info -->
+                        <!-- Skills info -->
                         <p>Please select all of the following that apply to you:</p>
                         <br>
-                        <!-- checkbox inputs checkbox r -->
-                        <label for="vector">
-                            <input type="checkbox" name="skills" id="vector">
+                        <!-- Checkbox inputs checkbox -->
+                        <label for="a-vector">
+                            <input type="checkbox" name="vector" id="a-vector">
                             Vector Drawing
                         </label>
-                        <label for="raster">
-                            <input type="checkbox" name="skills" id="raster">
+                        <label for="a-raster">
+                            <input type="checkbox" name="raster" id="a-raster">
                             Raster Drawing
                         </label>
-                        <label for="animation">
-                            <input type="checkbox" name="skills" id="animation">
+                        <label for="a-animation">
+                            <input type="checkbox" name="animation" id="a-animation">
                             Animation
                         </label>
-                        <label for="render">
-                            <input type="checkbox" name="skills" id="render">
+                        <label for="a-render">
+                            <input type="checkbox" name="three-dimensional" id="a-render">
                             Three Dimensional Rendering
                         </label>
 
-                        <!-- other skills checkbox -->
-                        <label for="otherskills">
-                            <input type="checkbox" name="skills" id="otherskills" checked>
+                        <!-- Other skills checkbox -->
+                        <label for="a-otherskills">
+                            <input type="checkbox" name="skills" id="a-otherskills" checked>
                             Other skills (please elaborate below)
                         </label>
-                        <!-- other skills textarea -->
+                        <!-- Other skills textarea -->
                         <br>
-                        <textarea rows="20" cols="70" name="skillsText"
+                        <textarea rows="20" cols="70" name="skills-text"
                             placeholder="Tell us about yourself... Please mention any prior experience"></textarea>
                     </fieldset>
-                    <!-- apply button use POST -->
+                    <!-- Apply button use POST -->
                     <input type="submit" value="Apply">
                 </fieldset>
             </form>
             <br>
-        </section>
+        </div>
 
 
-        <section id="programmer-pos">
+        <div id="programmer-pos">
             <!-- Form heading -->
             <form action="https://mercury.swin.edu.au/it000000/formtest.php" method="post">
                 <fieldset>
                     <legend>Game Programmer Position Application</legend>
-                    <!-- reference number 5 alphanum-->
+                    <!-- Reference number 5 alphanum-->
                     <fieldset>
                         <legend>Job reference number</legend>
-                        <section class="form-section">
-                            <label for="reference-number">Number</label>
-                            <input type="number" name="reference-number" id="reference-number" pattern[0-9]{5} required>
-                        </section>
+                        <div class="form-section">
+                            <label for="p-reference-number">Number</label>
+                            <input type="text" name="reference-number" id="p-reference-number" pattern="[0-9]{5}"
+                                required>
+                        </div>
                     </fieldset>
                     <fieldset>
-                        <!-- personal info -->
+                        <!-- Personal info -->
                         <legend>Personal Details</legend>
-                        <!-- First text r -->
-                        <section class="form-section">
-                            <label for="givenName">Given Name</label>
-                            <input name="givenName" id="givenName" type="text" placeholder="Given name" required>
-                        </section>
-                        <!-- Last text r -->
-                        <section class="form-section">
-                            <label for="familyName">Family Name</label>
-                            <input name="familyName" id="familyName" type="text" placeholder="Family name" required>
+                        <!-- First name -->
+                        <div class="form-section">
+                            <label for="p-given-name">Given Name</label>
+                            <input name="given-name" id="p-given-name" type="text" placeholder="Given name"
+                                maxlength="20" required>
+                        </div>
+                        <!-- Last name -->
+                        <div class="form-section">
+                            <label for="p-family-name">Family Name</label>
+                            <input name="family-name" id="p-family-name" type="text" placeholder="Family name"
+                                maxlength="20" required>
                             <br>
-                        </section>
-                        <!-- DOB date r -->
-                        <!-- Add DOB validation? for reference -> https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input/date -->
-                        <section class="form-section">
-                            <label for="birthdate">Date of Birth</label>
-                            <input name="birthdate" id="birthdate" type="date" required>
+                        </div>
+                        <!-- DOB date -->
+                        <!-- DOB validation -> https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input/date -->
+                        <div class="form-section">
+                            <label for="p-birthdate">Date of Birth</label>
+                            <input name="birthdate" id="p-birthdate" type="date" min="1900-01-01" max="2023-01-01"
+                                required>
                             <br>
-                        </section>
-                        <!-- gender radio r -->
-                        <section class="form-section">
-                            <label for="male" class="gender">
-                                <input type="radio" name="gender" id="male" value="Male" required>
+                        </div>
+                        <!-- Gender radio -->
+                        <div class="form-section">
+                            <label for="p-male" class="gender">
+                                <input type="radio" name="gender" id="p-male" value="Male" required checked>
                                 Male
                             </label>
-                            <label for="female" class="gender">
-                                <input type="radio" name="gender" id="female" value="Female">
+                            <label for="p-female" class="gender">
+                                <input type="radio" name="gender" id="p-female" value="Female">
                                 Female
                             </label>
-                            <label for="nonbinary" class="gender">
-                                <input type="radio" name="gender" id="nonbinary" value="Non-Binary">
+                            <label for="p-nonbinary" class="gender">
+                                <input type="radio" name="gender" id="p-nonbinary" value="Non-Binary">
                                 Non-Binary
                             </label>
-                            <label for="other" class="gender">
-                                <input type="radio" name="gender" id="other" value="Other">
+                            <label for="p-other" class="gender">
+                                <input type="radio" name="gender" id="p-other" value="Other">
                                 Prefer not to specify
                             </label>
                             <br>
-                        </section>
+                        </div>
                     </fieldset>
                     <fieldset>
                         <legend>Locational Information</legend>
-                        <!-- address info -->
-                        <!-- street address text r -->
-                        <section class="form-section">
-                            <label for="street">Street address</label>
-                            <input type="text" name="street" id="street" required>
+                        <!-- Address info -->
+                        <!-- Street address -->
+                        <div class="form-section">
+                            <label for="p-street">Street address</label>
+                            <input type="text" name="street" id="p-street" maxlength="40" required>
                             <br>
-                        </section>
-                        <!-- suburb/town text r -->
-                        <section class="form-section">
-                            <label for="suburb">Suburb/Town</label>
-                            <input type="text" name="suburb" id="suburb" required>
+                        </div>
+                        <!-- Suburb/town -->
+                        <div class="form-section">
+                            <label for="p-suburb">Suburb/Town</label>
+                            <input type="text" name="suburb" id="p-suburb" maxlength="40" required>
                             <br>
-                        </section>
-                        <!-- state dropdown r -->
-                        <section class="form-section">
-                            <label for="state">State</label>
-                            <select id="state" name="state" required>
+                        </div>
+                        <!-- State dropdown -->
+                        <div class="form-section">
+                            <label for="p-state">State</label>
+                            <select id="p-state" name="state" required>
+                                <option value="" disabled selected>Select your option</option>
                                 <option value="vic">Victoria</option>
                                 <option value="nsw">New South Whales</option>
                                 <option value="tas">Tasmania</option>
@@ -283,67 +304,69 @@
                                 <option value="act">Australian Captial Territory</option>
                             </select>
                             <br>
-                        </section>
-                        <!-- postcode number r -->
-                        <section class="form-section">
-                            <label for="postcode">Postcode</label>
-                            <input type="number" name="postcode" id="postcode" pattern[0-9]{4} required>
-                        </section>
+                        </div>
+                        <!-- Postcode number -->
+                        <div class="form-section">
+                            <label for="p-postcode">Postcode</label>
+                            <input type="text" name="postcode" id="p-postcode" pattern="[0-9]{4}" required>
+                        </div>
                     </fieldset>
                     <fieldset>
                         <legend>Contact Information</legend>
-                        <!-- contact info -->
-                        <!-- email addess email r -->
-                        <section class="form-section">
-                            <label for="email">Email address</label>
-                            <input type="email" name="email" id="email" required>
+                        <!-- Contact info -->
+                        <!-- Email address email -->
+                        <div class="form-section">
+                            <label for="p-email">Email address</label>
+                            <input type="email" name="email" id="p-email" required>
                             <br>
-                        </section>
-                        <!-- phone number r -->
-                        <section class="form-section">
-                            <label for="phoneNum">Phone number</label>
-                            <input type="text" name="phoneNum" id="phoneNum" pattern[0-9] required>
-                        </section>
+                        </div>
+                        <!-- Phone number -->
+                        <div class="form-section">
+                            <label for="p-phone-num">Phone number</label>
+                            <input type="text" name="phoneNum" id="p-phone-num"
+                                pattern="^\s*(?:\+?(\d{1,3}))?[-. (]*(\d{3})[-. )]*(\d{3})[-. ]*(\d{4})(?: *x(\d+))?\s*$"
+                                required>
+                        </div>
                     </fieldset>
                     <fieldset>
                         <legend>About You</legend>
-                        <!-- skills info -->
+                        <!-- Skills info -->
                         <p>Please select all of the following that apply to you:</p>
                         <br>
-                        <!-- checkbox inputs checkbox r -->
-                        <label for="python">
-                            <input type="checkbox" name="skills" id="python">
+                        <!-- Checkbox inputs checkbox -->
+                        <label for="p-python">
+                            <input type="checkbox" name="python" id="p-python">
                             Python
                         </label>
-                        <label for="javascript">
-                            <input type="checkbox" name="skills" id="javascript">
+                        <label for="p-javascript">
+                            <input type="checkbox" name="javascript" id="p-javascript">
                             JavaScript
                         </label>
-                        <label for="C#">
-                            <input type="checkbox" name="skills" id="C#">
+                        <label for="p-C#">
+                            <input type="checkbox" name="c#" id="p-C#">
                             C#
                         </label>
-                        <label for="unity">
-                            <input type="checkbox" name="skills" id="unity">
+                        <label for="p-unity">
+                            <input type="checkbox" name="unity" id="p-unity">
                             Unity
                         </label>
 
-                        <!-- other skills checkbox -->
-                        <label for="otherskills">
-                            <input type="checkbox" name="skills" id="otherskills" checked>
+                        <!-- Other skills checkbox -->
+                        <label for="p-otherskills">
+                            <input type="checkbox" name="skills" id="p-otherskills" checked>
                             Other skills (please elaborate below)
                         </label>
-                        <!-- other skills textarea -->
+                        <!-- Other skills textarea -->
                         <br>
-                        <textarea rows="20" cols="70" name="skillsText"
+                        <textarea rows="20" cols="70" name="skills-text"
                             placeholder="Tell us about yourself... Please mention any prior experience"></textarea>
                     </fieldset>
-                    <!-- apply button use POST -->
+                    <!-- Apply button use POST -->
                     <input type="submit" value="Apply">
                 </fieldset>
             </form>
             <br>
-        </section>
+        </div>
 
 
     </section>
