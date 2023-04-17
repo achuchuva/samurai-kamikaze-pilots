@@ -132,6 +132,17 @@ nav div {
   border-color: #DFE4E7;
 }
 
+#primary a {
+  text-decoration: none;
+  color: #979797;
+  transition-duration: 0.2s;
+}
+
+#primary a:hover {
+  color: #DFE4E7;
+  text-decoration: underline;
+}
+
 /* Aside section */
 
 aside {
