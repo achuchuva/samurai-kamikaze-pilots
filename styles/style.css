@@ -114,6 +114,9 @@ nav div {
 #primary .button {
   text-decoration: none;
   color: #DFE4E7;
+  border-style: outset;
+  border-width: 2px;
+  border-color: rgba(223, 228, 231, 1);
 }
 
 #primary nav .button {
@@ -138,7 +141,7 @@ aside {
   background-image: linear-gradient(rgba(47, 47, 59, 0.4), rgba(47, 47, 59, 0.7));
   margin: 50px 16vw 50px 50px;
   height: 60vh;
-  border: 2px solid #FFFFFF;
+  border: 2px solid #DFE4E7;
   border-radius: 10px;
 }
 
@@ -149,7 +152,6 @@ aside section {
 aside a {
   color: #DFE4E7;
   text-decoration: none;
-  transition: 0.2s ease-in-out;
 }
 
 aside a:hover {
@@ -185,6 +187,17 @@ aside a:hover {
 
 #secondary p {
   padding-bottom: 10px;
+}
+
+#secondary a {
+  text-decoration: none;
+  font-weight: bold;
+  color: #666;
+  transition-duration: 0.2s;
+}
+
+#secondary a:hover {
+  color: #CC3300;
 }
 
 /* Index specific content */
@@ -232,11 +245,12 @@ dd {
 dd a {
   text-decoration: none;
   color: #979797;
+  transition-duration: 0.2s;
 }
 
 dd a:hover {
-  color: #dddddd;
-  font-weight: bold;
+  color: #DFE4E7;
+  text-decoration: underline;
 }
 
 /* Floating group photo to the right */
@@ -275,21 +289,15 @@ ul, ol {
 }
 
 .flexbox img {
+  margin-top: auto
+}
+
+.flexbox img {
   border: 5px solid #333;
 }
 
 .flexbox section {
   padding-bottom: 10px;
-}
-
-.flexbox a {
-  text-decoration: none;
-  font-weight: bold;
-  color: #666;
-}
-
-.flexbox a:hover {
-  color: #FFFFFF;
 }
 
 
@@ -450,17 +458,6 @@ figure img {
   background-color: #00ad70;
   border-radius: 10px;
   box-shadow: 2px 2px 2px #006400;
-}
-
-/* Enhancements */
-#secondary a {
-  text-decoration: none;
-  font-weight: bold;
-  color: #666;
-}
-
-#secondary a:hover {
-  color: #FFFFFF;
 }
 
 /* Footer */
