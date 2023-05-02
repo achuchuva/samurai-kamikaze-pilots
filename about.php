@@ -15,32 +15,9 @@
 
 <body>
     <div id="primary">
-
-        <input type="checkbox" id="navbar-checkbox">
-        <label for="navbar-checkbox" class="navbar-button">
-            <img src="images/hamburger-icon.png" alt="Hamburger Icon">
-        </label>
-
-        <img src="./images/SKPLogo.png" class="logo" alt="HOME">
-
-        <!-- Standard nav bar -->
-        <nav>
-            <a href="index.html">
-                <div> HOME </div>
-            </a>
-            <a href="jobs.html">
-                <div> JOBS </div>
-            </a>
-            <a href="apply.html">
-                <div> APPLY </div>
-            </a>
-            <a href="about.html">
-                <div> ABOUT </div>
-            </a>
-            <a href="enhancements.html">
-                <div> ENHANCEMENTS </div>
-            </a>
-        </nav>
+    <?php
+        include 'navbar.inc';
+    ?>
 
         <!-- Group information as a definition list -->
         <section class="content">
@@ -367,19 +344,9 @@
 
 
     <!-- Standard footer -->
-    <footer>
-        <div class="footer-content">
-            <h3>Stay Connected</h3>
-            <p>Email our company if you have any questions:</p>
-            <a
-                href="mailto:100225609@student.swin.edu.au?cc=104300597@student.swin.edu.au;104548805@student.swin.edu.au;104584362@student.swin.edu.au;104567729@student.swin.edu.au">
-                Our company email
-            </a>
-        </div>
-        <div class="footer-bottom">
-            <p>&copy; 2023 SKP. All Rights Reserved.</p>
-        </div>
-    </footer>
+    <?php
+        include 'footer.inc';
+    ?>
 
 </body>
 
