@@ -44,7 +44,7 @@
 
         <div id="animator-pos">
             <!-- Form heading -->
-            <form action="https://mercury.swin.edu.au/it000000/formtest.php" method="post">
+            <form method="post" action="processEOI.php" novalidate="novalidate">
                 <fieldset>
                     <legend>Game Animator Position Application</legend>
                     <!-- Reference number 5 alphanum-->
@@ -161,30 +161,30 @@
                         <br>
                         <!-- Checkbox inputs checkbox -->
                         <label for="a-vector">
-                            <input type="checkbox" name="vector" id="a-vector">
+                            <input type="checkbox" name="skills[]" value="vector" id="a-vector">
                             Vector Drawing
                         </label>
                         <label for="a-raster">
-                            <input type="checkbox" name="raster" id="a-raster">
+                            <input type="checkbox" name="skills[]" value="raster" id="a-raster">
                             Raster Drawing
                         </label>
                         <label for="a-animation">
-                            <input type="checkbox" name="animation" id="a-animation">
+                            <input type="checkbox" name="skills[]" value="animation" id="a-animation">
                             Animation
                         </label>
                         <label for="a-render">
-                            <input type="checkbox" name="three-dimensional" id="a-render">
+                            <input type="checkbox" name="skills[]" value="render" id="a-render">
                             Three Dimensional Rendering
                         </label>
 
                         <!-- Other skills checkbox -->
-                        <label for="a-otherskills">
-                            <input type="checkbox" name="skills" id="a-otherskills" checked>
+                        <label for="a-other">
+                            <input type="checkbox" name="skills[]" value="other" id="a-other" checked>
                             Other skills (please elaborate below)
                         </label>
                         <!-- Other skills textarea -->
                         <br>
-                        <textarea rows="20" cols="70" name="skills-text"
+                        <textarea rows="20" cols="70" name="other"
                             placeholder="Tell us about yourself... Please mention any prior experience"></textarea>
                     </fieldset>
                     <!-- Apply button use POST -->
@@ -197,7 +197,7 @@
 
         <div id="programmer-pos">
             <!-- Form heading -->
-            <form action="https://mercury.swin.edu.au/it000000/formtest.php" method="post">
+            <form method="post" action="processEOI.php" novalidate="novalidate">
                 <fieldset>
                     <legend>Game Programmer Position Application</legend>
                     <!-- Reference number 5 alphanum-->
@@ -314,30 +314,30 @@
                         <br>
                         <!-- Checkbox inputs checkbox -->
                         <label for="p-python">
-                            <input type="checkbox" name="python" id="p-python">
+                            <input type="checkbox" name="skills[]" value="python" id="p-python">
                             Python
                         </label>
                         <label for="p-javascript">
-                            <input type="checkbox" name="javascript" id="p-javascript">
+                            <input type="checkbox" name="skills[]" value="javascript" id="p-javascript">
                             JavaScript
                         </label>
                         <label for="p-C#">
-                            <input type="checkbox" name="c#" id="p-C#">
+                            <input type="checkbox" name="skills[]" value="c#" id="p-C#">
                             C#
                         </label>
                         <label for="p-unity">
-                            <input type="checkbox" name="unity" id="p-unity">
+                            <input type="checkbox" name="skills[]" value="unity" id="p-unity">
                             Unity
                         </label>
 
                         <!-- Other skills checkbox -->
-                        <label for="p-otherskills">
-                            <input type="checkbox" name="skills" id="p-otherskills" checked>
+                        <label for="p-other">
+                            <input type="checkbox" name="skills[]" value="other" id="p-other" checked>
                             Other skills (please elaborate below)
                         </label>
                         <!-- Other skills textarea -->
                         <br>
-                        <textarea rows="20" cols="70" name="skills-text"
+                        <textarea rows="20" cols="70" name="other"
                             placeholder="Tell us about yourself... Please mention any prior experience"></textarea>
                     </fieldset>
                     <!-- Apply button use POST -->
