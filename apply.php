@@ -17,9 +17,9 @@
 
     <div id="primary">
 
-    <?php
+        <?php
         include 'navbar.inc';
-    ?>
+        ?>
 
         <section class="content">
             <h1>Apply for a job with SKP</h1>
@@ -51,9 +51,29 @@
                     <fieldset>
                         <legend>Job reference number</legend>
                         <div class="form-section">
-                            <label for="a-reference-number">Number - Please enter your 5 digit reference number</label>
-                            <input type="text" name="reference-number" id="a-reference-number" placeholder="12345" pattern="[0-9]{5}"
-                                required>
+                            <label for="a-reference-number">Number</label>
+                            <input type="text" name="reference-number" id="a-reference-number" placeholder="12345" list="ref-nums" pattern="[0-9]{5}" required>
+                            <?php
+                            require_once("settings.php");
+
+                            $conn = @mysqli_connect(
+                                $host,
+                                $user,
+                                $pwd,
+                                $sql_db
+                            );
+
+                            if ($conn) {
+                                $query = "SELECT `job_ref` FROM `jobs`;";
+                                $result = mysqli_query($conn, $query);
+
+                                echo "<datalist id='ref-nums'>";
+                                while ($row = mysqli_fetch_assoc($result)) {
+                                    echo "<option>", $row["job_ref"], "</option>";
+                                }
+                                echo "</datalist>";
+                            }
+                            ?>
                         </div>
                     </fieldset>
                     <fieldset>
@@ -62,22 +82,19 @@
                         <!-- First name -->
                         <div class="form-section">
                             <label for="a-given-name">Given Name</label>
-                            <input name="given-name" id="a-given-name" type="text" placeholder="Given name"
-                                maxlength="20" required>
+                            <input name="given-name" id="a-given-name" type="text" placeholder="Given name" maxlength="20" required>
                         </div>
                         <!-- Last name -->
                         <div class="form-section">
                             <label for="a-family-name">Family Name</label>
-                            <input name="family-name" id="a-family-name" type="text" placeholder="Family name"
-                                maxlength="20" required>
+                            <input name="family-name" id="a-family-name" type="text" placeholder="Family name" maxlength="20" required>
                             <br>
                         </div>
                         <!-- DOB date -->
                         <!-- DOB validation-> https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input/date -->
                         <div class="form-section">
                             <label for="a-birthdate">Date of Birth</label>
-                            <input name="birthdate" id="a-birthdate" type="date" min="1900-01-01" max="2023-01-01"
-                                required>
+                            <input name="birthdate" id="a-birthdate" type="date" min="1900-01-01" max="2023-01-01" required>
                             <br>
                         </div>
                         <!-- Gender radio -->
@@ -121,13 +138,13 @@
                             <label for="a-state">State</label>
                             <select id="a-state" name="state" required>
                                 <option value="" disabled selected>Select your option</option>
-                                <option value="vic">Victoria</option>
-                                <option value="nsw">New South Whales</option>
-                                <option value="tas">Tasmania</option>
-                                <option value="sa">South Australia</option>
-                                <option value="wa">Western Australia</option>
-                                <option value="nt">Northern Territory</option>
-                                <option value="act">Australian Captial Territory</option>
+                                <option value="VIC">Victoria</option>
+                                <option value="NSW">New South Whales</option>
+                                <option value="TAS">Tasmania</option>
+                                <option value="SA">South Australia</option>
+                                <option value="WA">Western Australia</option>
+                                <option value="NT">Northern Territory</option>
+                                <option value="ACT">Australian Captial Territory</option>
                             </select>
                             <br>
                         </div>
@@ -149,9 +166,7 @@
                         <!-- Phone number -->
                         <div class="form-section">
                             <label for="a-phone-num">Phone number - no spaces</label>
-                            <input type="text" name="phone-num" id="a-phone-num"
-                                pattern="^\s*(?:\+?(\d{1,3}))?[-. (]*(\d{3})[-. )]*(\d{3})[-. ]*(\d{4})(?: *x(\d+))?\s*$"
-                                required>
+                            <input type="text" name="phone-num" id="a-phone-num" pattern="^\s*(?:\+?(\d{1,3}))?[-. (]*(\d{3})[-. )]*(\d{3})[-. ]*(\d{4})(?: *x(\d+))?\s*$" required>
                         </div>
                     </fieldset>
                     <fieldset>
@@ -161,19 +176,19 @@
                         <br>
                         <!-- Checkbox inputs checkbox -->
                         <label for="a-vector">
-                            <input type="checkbox" name="skills[]" value="vector" id="a-vector">
+                            <input type="checkbox" name="skills[]" value="Vector Drawing" id="a-vector">
                             Vector Drawing
                         </label>
                         <label for="a-raster">
-                            <input type="checkbox" name="skills[]" value="raster" id="a-raster">
+                            <input type="checkbox" name="skills[]" value="Raster Drawing" id="a-raster">
                             Raster Drawing
                         </label>
                         <label for="a-animation">
-                            <input type="checkbox" name="skills[]" value="animation" id="a-animation">
+                            <input type="checkbox" name="skills[]" value="Animation" id="a-animation">
                             Animation
                         </label>
                         <label for="a-render">
-                            <input type="checkbox" name="skills[]" value="render" id="a-render">
+                            <input type="checkbox" name="skills[]" value="Three Dimensional Rendering" id="a-render">
                             Three Dimensional Rendering
                         </label>
 
@@ -184,8 +199,7 @@
                         </label>
                         <!-- Other skills textarea -->
                         <br>
-                        <textarea rows="20" cols="70" name="other"
-                            placeholder="Tell us about yourself... Please mention any prior experience"></textarea>
+                        <textarea rows="20" cols="70" name="other" placeholder="Tell us about yourself... Please mention any prior experience"></textarea>
                     </fieldset>
                     <!-- Apply button use POST -->
                     <input type="submit" value="Apply">
@@ -205,8 +219,28 @@
                         <legend>Job reference number</legend>
                         <div class="form-section">
                             <label for="p-reference-number">Number</label>
-                            <input type="text" name="reference-number" id="p-reference-number" placeholder="12345" pattern="[0-9]{5}"
-                                required>
+                            <input type="text" name="reference-number" id="p-reference-number" list="ref-nums" placeholder="12345" pattern="[0-9]{5}" required>
+                            <?php
+                            require_once("settings.php");
+
+                            $conn = @mysqli_connect(
+                                $host,
+                                $user,
+                                $pwd,
+                                $sql_db
+                            );
+
+                            if ($conn) {
+                                $query = "SELECT `job_ref` FROM `jobs`;";
+                                $result = mysqli_query($conn, $query);
+
+                                echo "<datalist id='ref-nums'>";
+                                while ($row = mysqli_fetch_assoc($result)) {
+                                    echo "<option>", $row["job_ref"], "</option>";
+                                }
+                                echo "</datalist>";
+                            }
+                            ?>
                         </div>
                     </fieldset>
                     <fieldset>
@@ -215,22 +249,19 @@
                         <!-- First name -->
                         <div class="form-section">
                             <label for="p-given-name">Given Name</label>
-                            <input name="given-name" id="p-given-name" type="text" placeholder="Given name"
-                                maxlength="20" required>
+                            <input name="given-name" id="p-given-name" type="text" placeholder="Given name" maxlength="20" required>
                         </div>
                         <!-- Last name -->
                         <div class="form-section">
                             <label for="p-family-name">Family Name</label>
-                            <input name="family-name" id="p-family-name" type="text" placeholder="Family name"
-                                maxlength="20" required>
+                            <input name="family-name" id="p-family-name" type="text" placeholder="Family name" maxlength="20" required>
                             <br>
                         </div>
                         <!-- DOB date -->
                         <!-- DOB validation -> https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input/date -->
                         <div class="form-section">
                             <label for="p-birthdate">Date of Birth</label>
-                            <input name="birthdate" id="p-birthdate" type="date" min="1900-01-01" max="2023-01-01"
-                                required>
+                            <input name="birthdate" id="p-birthdate" type="date" min="1900-01-01" max="2023-01-01" required>
                             <br>
                         </div>
                         <!-- Gender radio -->
@@ -274,13 +305,13 @@
                             <label for="p-state">State</label>
                             <select id="p-state" name="state" required>
                                 <option value="" disabled selected>Select your option</option>
-                                <option value="vic">Victoria</option>
-                                <option value="nsw">New South Whales</option>
-                                <option value="tas">Tasmania</option>
-                                <option value="sa">South Australia</option>
-                                <option value="wa">Western Australia</option>
-                                <option value="nt">Northern Territory</option>
-                                <option value="act">Australian Captial Territory</option>
+                                <option value="VIC">Victoria</option>
+                                <option value="NSW">New South Whales</option>
+                                <option value="TAS">Tasmania</option>
+                                <option value="SA">South Australia</option>
+                                <option value="WA">Western Australia</option>
+                                <option value="NT">Northern Territory</option>
+                                <option value="ACT">Australian Captial Territory</option>
                             </select>
                             <br>
                         </div>
@@ -302,9 +333,7 @@
                         <!-- Phone number -->
                         <div class="form-section">
                             <label for="p-phone-num">Phone number</label>
-                            <input type="text" name="phoneNum" id="p-phone-num"
-                                pattern="^\s*(?:\+?(\d{1,3}))?[-. (]*(\d{3})[-. )]*(\d{3})[-. ]*(\d{4})(?: *x(\d+))?\s*$"
-                                required>
+                            <input type="text" name="phone-num" id="p-phone-num" pattern="^\s*(?:\+?(\d{1,3}))?[-. (]*(\d{3})[-. )]*(\d{3})[-. ]*(\d{4})(?: *x(\d+))?\s*$" required>
                         </div>
                     </fieldset>
                     <fieldset>
@@ -314,19 +343,19 @@
                         <br>
                         <!-- Checkbox inputs checkbox -->
                         <label for="p-python">
-                            <input type="checkbox" name="skills[]" value="python" id="p-python">
+                            <input type="checkbox" name="skills[]" value="Python" id="p-python">
                             Python
                         </label>
                         <label for="p-javascript">
-                            <input type="checkbox" name="skills[]" value="javascript" id="p-javascript">
+                            <input type="checkbox" name="skills[]" value="Javascript" id="p-javascript">
                             JavaScript
                         </label>
                         <label for="p-C#">
-                            <input type="checkbox" name="skills[]" value="c#" id="p-C#">
+                            <input type="checkbox" name="skills[]" value="C#" id="p-C#">
                             C#
                         </label>
                         <label for="p-unity">
-                            <input type="checkbox" name="skills[]" value="unity" id="p-unity">
+                            <input type="checkbox" name="skills[]" value="Unity" id="p-unity">
                             Unity
                         </label>
 
@@ -337,8 +366,7 @@
                         </label>
                         <!-- Other skills textarea -->
                         <br>
-                        <textarea rows="20" cols="70" name="other"
-                            placeholder="Tell us about yourself... Please mention any prior experience"></textarea>
+                        <textarea rows="20" cols="70" name="other" placeholder="Tell us about yourself... Please mention any prior experience"></textarea>
                     </fieldset>
                     <!-- Apply button use POST -->
                     <input type="submit" value="Apply">
@@ -352,7 +380,7 @@
 
     <!-- Standard footer -->
     <?php
-        include 'footer.inc';
+    include 'footer.inc';
     ?>
 </body>
 
