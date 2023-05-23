@@ -1,0 +1,21 @@
+/*import open sans font from google fonts*/
+@import url('https://fonts.googleapis.com/css?family=Open+Sans&display=swap');
+
+/* Applying global styling */
+
+* {
+    margin: 0px;
+    padding: 0px;
+    font-family: Open Sans;
+    scroll-behavior: smooth;
+}
+
+/*Body styling*/
+body {
+    background-color: #DFE4E7;
+}
+
+/*p styling (mostly for testing purposes)*/
+p {
+    margin: 20px;
+}
