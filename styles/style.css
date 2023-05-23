@@ -23,15 +23,12 @@ Authors William and Anton Chuchuva*/
   left: calc(1vh + 16px);
 }
 
-/* Login styling*/
-.login {
-    margin-right: 4vw;
+/* manage link styling*/
+.manage-link {
     color: #DFE4E7;
-    display: inline-block;
     position: absolute;
-    /* Adding 1 viewport height and 16px together dynamically */
-    top: calc(1vh + 16px);
-    right: calc(1vh + 16px);
+    top: 67px;
+    padding-left: 22px;
 }
 
 /* Nav styling */

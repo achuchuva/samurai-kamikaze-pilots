@@ -13,7 +13,7 @@
   }
 }
 
-/* Styling only applied below 1400px screen width */
+/* Styling only applied below 700px screen width */
 @media(max-width: 700px) {
 
   /* When the checkbox is checked on the mobile view, expand the collapsible menu */
@@ -42,6 +42,15 @@
     right: calc(1vh + 16px);
   }
 
+  /* manage link styling*/
+   .manage-link {
+     color: #DFE4E7;
+     position: absolute;
+     top: 67px;
+     right: 35px;
+     padding-left: 22px;
+    }
+
   /* Apply custom styling for the icon to make it look like a button */
   .navbar-button {
     position: relative;
@@ -55,6 +64,7 @@
     border-radius: 5px;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.5);
     transition: all 0.3s ease-in-out;
+    margin-bottom: 10px;
   }
 
   .navbar-button:hover {
