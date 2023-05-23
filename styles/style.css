@@ -23,8 +23,18 @@ Authors William and Anton Chuchuva*/
   left: calc(1vh + 16px);
 }
 
-/* Nav styling */
+/* Login styling*/
+.login {
+    margin-right: 4vw;
+    color: #DFE4E7;
+    display: inline-block;
+    position: absolute;
+    /* Adding 1 viewport height and 16px together dynamically */
+    top: calc(1vh + 16px);
+    right: calc(1vh + 16px);
+}
 
+/* Nav styling */
 nav {
   text-align: center;
   padding: 1vh 25vw 30px 25vw;
@@ -34,14 +44,14 @@ nav {
   font-weight: bold;
 }
 
-nav a {
-  color: #DFE4E7;
-  text-underline-offset: 20px;
-  text-decoration-thickness: 1px;
-  text-decoration-color: #DFE4E7;
-  /* Animation easing for clean look */
-  transition: 0.2s ease-in-out;
-}
+    nav a {
+        color: #DFE4E7;
+        text-underline-offset: 20px;
+        text-decoration-thickness: 1px;
+        text-decoration-color: #DFE4E7;
+        /* Animation easing for clean look */
+        transition: 0.2s ease-in-out;
+    }
 
 nav a:hover {
   text-decoration-color: #EE3300;
@@ -141,30 +151,6 @@ nav div {
 #primary a:hover {
   color: #DFE4E7;
   text-decoration: underline;
-}
-
-/* Process PHP styling */
-.process {
-  margin: auto;
-  width: 60%;
-  background-image: linear-gradient(rgba(47, 47, 59, 0.4), rgba(47, 47, 59, 0.7));
-  border: 2px solid #DFE4E7;
-  border-radius: 10px;
-  color: #DFE4E7;
-  padding: 30px;
-}
-
-.process h1 {
-  text-align: center;
-  font-size: 1.5em;
-}
-
-.process .red {
-  color: red; 
-}
-
-.process .green {
-  color: #04ff00; 
 }
 
 /* Aside section */
