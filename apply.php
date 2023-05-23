@@ -175,22 +175,36 @@
                         <p>Please select all of the following that apply to you:</p>
                         <br>
                         <!-- Checkbox inputs checkbox -->
-                        <label for="a-vector">
-                            <input type="checkbox" name="skills[]" value="Vector Drawing" id="a-vector">
-                            Vector Drawing
-                        </label>
-                        <label for="a-raster">
-                            <input type="checkbox" name="skills[]" value="Raster Drawing" id="a-raster">
-                            Raster Drawing
-                        </label>
-                        <label for="a-animation">
-                            <input type="checkbox" name="skills[]" value="Animation" id="a-animation">
-                            Animation
-                        </label>
-                        <label for="a-render">
-                            <input type="checkbox" name="skills[]" value="Three Dimensional Rendering" id="a-render">
-                            Three Dimensional Rendering
-                        </label>
+                        <?php
+                        require_once("settings.php");
+
+                        $conn = @mysqli_connect(
+                            $host,
+                            $user,
+                            $pwd,
+                            $sql_db
+                        );
+
+                        $job_ref = "343GA";
+
+                        if ($conn) {
+                            $query = "SELECT `skill_id` FROM `job_skills`
+                                    WHERE `job_id`=(SELECT `job_id` FROM `jobs` WHERE `job_ref`='$job_ref');";
+                            $result = mysqli_query($conn, $query);
+
+                            while ($row = mysqli_fetch_assoc($result)) {
+                                $skill_id = $row["skill_id"];
+                                $skills_query = "SELECT `skill_name` FROM `skills` WHERE `skill_id`=$skill_id";
+                                $skills_result = mysqli_query($conn, $skills_query);
+
+                                while ($skills_row = mysqli_fetch_assoc($skills_result)) {
+                                    echo "<label for='p-", $skills_row["skill_name"], "'>";
+                                    echo "<input type='checkbox' name='skills[]' value='", $skills_row["skill_name"], "'> ", $skills_row["skill_name"];
+                                    echo "</label>";
+                                }
+                            }
+                        }
+                        ?>
 
                         <!-- Other skills checkbox -->
                         <label for="a-other">
@@ -342,22 +356,36 @@
                         <p>Please select all of the following that apply to you:</p>
                         <br>
                         <!-- Checkbox inputs checkbox -->
-                        <label for="p-python">
-                            <input type="checkbox" name="skills[]" value="Python" id="p-python">
-                            Python
-                        </label>
-                        <label for="p-javascript">
-                            <input type="checkbox" name="skills[]" value="Javascript" id="p-javascript">
-                            JavaScript
-                        </label>
-                        <label for="p-C#">
-                            <input type="checkbox" name="skills[]" value="C#" id="p-C#">
-                            C#
-                        </label>
-                        <label for="p-unity">
-                            <input type="checkbox" name="skills[]" value="Unity" id="p-unity">
-                            Unity
-                        </label>
+                        <?php
+                        require_once("settings.php");
+
+                        $conn = @mysqli_connect(
+                            $host,
+                            $user,
+                            $pwd,
+                            $sql_db
+                        );
+
+                        $job_ref = "343GA";
+
+                        if ($conn) {
+                            $query = "SELECT `skill_id` FROM `job_skills`
+                                    WHERE `job_id`=(SELECT `job_id` FROM `jobs` WHERE `job_ref`='$job_ref');";
+                            $result = mysqli_query($conn, $query);
+
+                            while ($row = mysqli_fetch_assoc($result)) {
+                                $skill_id = $row["skill_id"];
+                                $skills_query = "SELECT `skill_name` FROM `skills` WHERE `skill_id`=$skill_id";
+                                $skills_result = mysqli_query($conn, $skills_query);
+
+                                while ($skills_row = mysqli_fetch_assoc($skills_result)) {
+                                    echo "<label for='p-", $skills_row["skill_name"], "'>";
+                                    echo "<input type='checkbox' name='skills[]' value='", $skills_row["skill_name"], "'> ", $skills_row["skill_name"];
+                                    echo "</label>";
+                                }
+                            }
+                        }
+                        ?>
 
                         <!-- Other skills checkbox -->
                         <label for="p-other">
