@@ -5,11 +5,6 @@
         </label>
 
         <img src="./images/SKPLogo.png" class="logo" alt="HOME">
-
-        <div class="manage-link">
-            <a href="manage.php" onclick="window.open(this.href, '_blank', 'width=500,height=500'); return false;">MANAGE</a>
-        </div>
-
         <!-- Standard nav bar -->
         <nav>
             <a href="index.php">
@@ -28,3 +23,7 @@
                 <div> ENHANCEMENTS </div>
             </a>
         </nav>
+
+        <div class="login">
+            <a href="manage.php" onclick="window.open(this.href, '_blank', 'width=500,height=500'); return false;">manage</a>
+        </div>

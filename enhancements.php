@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="keywords" content="HTML, CSS">
+    <meta name="keywords" content="HTML, CSS, PHP">
     <meta name="description" content="Enhancements to the SKP web page">
     <meta name="author" content="Anton Chuchuva">
     <link rel="stylesheet" href="styles/style.css">
@@ -31,9 +31,6 @@
                 </a>
                 <a class="button" href="#collapsible-menu">
                     COLLAPSIBLE MENU
-                </a>
-                <a class="button" href="#management-window">
-                    MANAGEMENT WINDOW
                 </a>
             </div>
         </section>
@@ -95,47 +92,6 @@
                 Media queries used on a separate CSS file (mobile.css) allow the menu to only appear at a certain screen
                 width threshold. Selectors for the nav bar restyle the menu to instead be in columns and only have
                 visible display when the user has toggled the button and disabled when the user closes the menu.
-            </p>
-            <h3>References</h3>
-            <p>
-                <a href="https://www.w3schools.com/howto/howto_js_collapse_sidebar.asp">How To Create a Collapsed
-                    Sidebar</a>
-            </p>
-        </div>
-        <div id="management-window">
-            <h2>Management Window</h2>
-            <p>
-                <a href="#top">Link to the enhancement</a>
-            </p>
-            <h3>What is it</h3>
-            <p>
-                The management window is opened via a link in the navbar. It links to a new window, which displays the management 
-                page, from which the user can log into the database and view all of the database tables.
-            </p>
-            <h3>Going beyond basic requirements</h3>
-            <p>
-                This feature allows for ease of access to the management page, allowing the page manager to view the page without
-                needing to open it in a new tab. It means that while managing the site, the manager can view the database in a seperate 
-                window.<br/>
-                All-in-all, the feature is simply a quality-of-life feature, which means that the user spends less time organising their
-                windows while managing the database.
-            </p>
-            <h3>The code involved</h3>
-            <p>
-                The code to link to the management page is only slightly different to a normal "a href" link. within the navbar.inc, a link
-                to the manageme page has been added: <a href="manage.php" onclick="window.open(this.href, '_blank', 'width=500,height=500'); return false;">manage</a>
-                The attribute "onclick="window.open(this.href, '_blank', 'width=500,height=500'); return false;" tells the link to open in
-                another window, rather than the same tab. <br/>
-                On top of this, styling has been added in order to have the login link float to the right of the navbar: <br/>
-                .login { <br/>
-                margin-right: 4vw; <br/>
-                color: #DFE4E7; <br/>
-                display: inline-block; <br/>
-                position: absolute; <br/>
-                /* Adding 1 viewport height and 16px together dynamically */ <br/>
-                top: calc(1vh + 16px); <br/>
-                right: calc(1vh + 16px); <br/>
-                } <br/>
             </p>
             <h3>References</h3>
             <p>
