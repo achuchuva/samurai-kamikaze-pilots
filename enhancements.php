@@ -16,9 +16,9 @@
 <body>
 
     <div id="primary">
-    <?php
+        <?php
         include 'navbar.inc';
-    ?>
+        ?>
 
         <section class="content">
             <h1>Enhancements</h1>
@@ -31,6 +31,9 @@
                 </a>
                 <a class="button" href="#collapsible-menu">
                     COLLAPSIBLE MENU
+                </a>
+                <a class="button" href="#management-window">
+                    MANAGEMENT WINDOW
                 </a>
             </div>
         </section>
@@ -99,12 +102,56 @@
                     Sidebar</a>
             </p>
         </div>
+        <div id="management-window">
+            <h2>Management Window</h2>
+            <p>
+                <a href="#top">Link to the enhancement</a>
+            </p>
+            <h3>What is it</h3>
+            <p>
+                The management window is opened via a link in the navbar. It links to a new window, which displays the management
+                page, from which the user can log into the database and view all of the database tables.
+            </p>
+            <h3>Going beyond basic requirements</h3>
+            <p>
+                This feature allows for ease of access to the management page, allowing the page manager to view the page without
+                needing to open it in a new tab. It means that while managing the site, the manager can view the database in a seperate
+                window.<br />
+                All-in-all, the feature is simply a quality-of-life feature, which means that the user spends less time organising their
+                windows while managing the database.
+            </p>
+            <h3>The code involved</h3>
+            <p>
+                The code to link to the management page is only slightly different to a normal "a href" link. within the navbar.inc, a link
+                to the manageme page has been added: <a href="manage.php" onclick="window.open(this.href, '_blank', 'width=500,height=500'); return false;">manage</a>
+                The attribute "onclick="window.open(this.href, '_blank', 'width=500,height=500'); return false;" tells the link to open in
+                another window, rather than the same tab. <br />
+                On top of this, styling has been added in order to have the login link sit underneath the SKP logo: <br />
+                .manage-link { <br />
+                color: #DFE4E7; <br />
+                position: absolute; <br />
+                top: 67px; <br/>
+                padding-left: 22px; <br/>
+                } <br />
+                <br/>
+                As well as styling for the mobile version of the page, in order to have the link move with the SKP logo to the right side: <br/>
+                .manage-link { <br/>
+                position: absolute; <br/>
+                right: 35px; <br/>
+                } <br/>
+            </p>
+            <h3>References</h3>
+            <p>
+                <a href="https://www.w3schools.com/howto/howto_js_collapse_sidebar.asp">How To Create a Collapsed
+                    Sidebar</a>
+            </p>
+        </div>
 
     </section>
 
     <!-- Standard footer -->
     <?php
-        include 'footer.inc';
+    include 'footer.inc';
     ?>
 
 </body>
