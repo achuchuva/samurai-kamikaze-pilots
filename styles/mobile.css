@@ -44,8 +44,11 @@
 
   /* manage link styling*/
    .manage-link {
+     color: #DFE4E7;
      position: absolute;
+     top: 67px;
      right: 35px;
+     padding-left: 22px;
     }
 
   /* Apply custom styling for the icon to make it look like a button */

@@ -126,21 +126,16 @@
                 to the manageme page has been added: <a href="manage.php" onclick="window.open(this.href, '_blank', 'width=500,height=500'); return false;">manage</a>
                 The attribute "onclick="window.open(this.href, '_blank', 'width=500,height=500'); return false;" tells the link to open in
                 another window, rather than the same tab. <br/>
-                <br/>
-                On top of this, styling has been added in order to have the login link sit underneath the SKP logo <br/>
-                .manage-link { <br/>
+                On top of this, styling has been added in order to have the login link float to the right of the navbar: <br/>
+                .login { <br/>
+                margin-right: 4vw; <br/>
                 color: #DFE4E7; <br/>
+                display: inline-block; <br/>
                 position: absolute; <br/>
-                top: 67px; <br/>
-                padding-left: 22px; <br/>
+                /* Adding 1 viewport height and 16px together dynamically */ <br/>
+                top: calc(1vh + 16px); <br/>
+                right: calc(1vh + 16px); <br/>
                 } <br/>
-                <br/>
-                As well as styling for the mobile version of the page, in order to have the link move with the SKP logo to the right side:  <br/>
-                .manage-link { <br/>
-                position: absolute; <br/>
-                right: 35px; <br/>
-                } <br/>
-}
             </p>
             <h3>References</h3>
             <p>
