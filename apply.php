@@ -205,12 +205,6 @@
                             }
                         }
                         ?>
-
-                        <!-- Other skills checkbox -->
-                        <label for="a-other">
-                            <input type="checkbox" name="skills[]" value="other" id="a-other" checked>
-                            Other skills (please elaborate below)
-                        </label>
                         <!-- Other skills textarea -->
                         <br>
                         <textarea rows="20" cols="70" name="other" placeholder="Tell us about yourself... Please mention any prior experience"></textarea>
@@ -366,7 +360,7 @@
                             $sql_db
                         );
 
-                        $job_ref = "343GA";
+                        $job_ref = "256GP";
 
                         if ($conn) {
                             $query = "SELECT `skill_id` FROM `job_skills`
@@ -386,12 +380,6 @@
                             }
                         }
                         ?>
-
-                        <!-- Other skills checkbox -->
-                        <label for="p-other">
-                            <input type="checkbox" name="skills[]" value="other" id="p-other" checked>
-                            Other skills (please elaborate below)
-                        </label>
                         <!-- Other skills textarea -->
                         <br>
                         <textarea rows="20" cols="70" name="other" placeholder="Tell us about yourself... Please mention any prior experience"></textarea>

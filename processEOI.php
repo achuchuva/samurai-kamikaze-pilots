@@ -152,6 +152,52 @@
                     $postcode = sanitise_input(($_POST["postcode"]), $conn);
                     if (preg_match($POSTCODE_REGEX, $postcode) == 0) {
                         $error_message .= "<p>The entered postcode doesn't match the expected format XXXX.</p>";
+                    } else {
+                        $i = intval($postcode);
+                        switch ($_POST["state"]) {
+                            case "NSW":
+                                if ($i < 1000 || ($i > 2599 && $i < 2619) || ($i > 2899 && $i < 2921) || $i > 2999) {
+                                    $error_message .= "<p>The entered postcode isn't within the NSW region.</p>";
+                                }
+                                break;
+                            case "ACT":
+                                if ($i < 200 || ($i > 299 && $i < 2600) || ($i > 2618 && $i < 2900) || $i > 2920) {
+                                    $error_message .= "<p>The entered postcode isn't within the ACT region.</p>";
+                                }
+                                break;
+                            case "VIC":
+                                if ($i < 3000 || ($i > 3999 && $i < 8000) || $i > 8999) {
+                                    $error_message .= "<p>The entered postcode isn't within the VIC region.</p>";
+                                }
+                                break;
+                            case "QLD":
+                                if ($i < 4000 || ($i > 4999 && $i < 9000)) {
+                                    $error_message .= "<p>The entered postcode isn't within the QLD region.</p>";
+                                }
+                                break;
+                            case "SA":
+                                if ($i < 5000 || $i > 5999) {
+                                    $error_message .= "<p>The entered postcode isn't within the SA region.</p>";
+                                }
+                                break;
+                            case "WA":
+                                if ($i < 6000 || $i > 6999) {
+                                    $error_message .= "<p>The entered postcode isn't within the WA region.</p>";
+                                }
+                                break;
+                            case "TAS":
+                                if ($i < 7000 || $i > 7999) {
+                                    $error_message .= "<p>The entered postcode isn't within the TAS region.</p>";
+                                }
+                                break;
+                            case "NT":
+                                if ($i < 800 || $i > 999) {
+                                    $error_message .= "<p>The entered postcode isn't within the NT region.</p>";
+                                }
+                                break;
+                            default:
+                                $error_message .= "<p>The selected state doesn't match the expected format.</p>";
+                        }
                     }
                 }
 
@@ -232,7 +278,6 @@
                         echo "<h1 class='green'>Thank you for submitting your expression of interest</h1>";
                         echo "<p>We will review your application as soon as possible and we look forward to your career with SKP.</p>";
                         echo $error_message;
-
                     } catch (Exception $exc) {
                         echo "<h1 class='red'>There was an error processing your expression of interest</h1>";
                         echo "<p>Something went wrong with executing the query ", $exc->getMessage(), ".</p>";
