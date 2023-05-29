@@ -205,6 +205,13 @@
                             }
                         }
                         ?>
+
+                        <!-- Other skills checkbox -->
+                        <label for="a-other">
+                            <input type="checkbox" name="other-skills" value="other-skills" id="a-other">
+                            Other skills (please elaborate below)
+                        </label>
+
                         <!-- Other skills textarea -->
                         <br>
                         <textarea rows="20" cols="70" name="other" placeholder="Tell us about yourself... Please mention any prior experience"></textarea>
@@ -380,6 +387,13 @@
                             }
                         }
                         ?>
+
+                        <!-- Other skills checkbox -->
+                        <label for="p-other">
+                            <input type="checkbox" name="other-skills" value="other-skills" id="p-other">
+                            Other skills (please elaborate below)
+                        </label>
+
                         <!-- Other skills textarea -->
                         <br>
                         <textarea rows="20" cols="70" name="other" placeholder="Tell us about yourself... Please mention any prior experience"></textarea>

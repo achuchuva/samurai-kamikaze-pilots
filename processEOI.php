@@ -238,8 +238,13 @@
                     }
                 }
 
-                if (!empty($_POST["other"])) {
-                    $other = sanitise_input(($_POST["other"]), $conn);
+                $other = '';
+                if (!empty($_POST["other-skills"])) {
+                    if (!empty($_POST["other"])) {
+                        $other = sanitise_input(($_POST["other"]), $conn);
+                    } else {
+                        $error_message .= "<p>You haven't provided a description of your other skills.</p>";
+                    }
                 }
 
                 if (!empty($error_message)) {
