@@ -42,7 +42,7 @@
         <div id="image-map">
             <h2>The Image Map</h2>
             <p>
-                <a href="./about.html">Link to the enhancement</a>
+                <a href="./about.php">Link to the enhancement</a>
             </p>
             <h3>What is it</h3>
             <p>
