@@ -107,6 +107,9 @@
         </div>
         <div id="normalising-dataset">
             <h2>Normalising dataset</h2>
+            <p>
+                <a href="./manage.php">Link to the enhancement</a>
+            </p>
             <h3>What is it</h3>
             <p>
                 Two extra tables were created along with the EOI table: address and skills. They were primarily implemented
@@ -129,6 +132,9 @@
         </div>
         <div id="login-page">
             <h2>Login Page</h2>
+            <p>
+                <a href="./login.php">Link to the enhancement</a>
+            </p>
             <h3>What is it</h3>
             <p>
                 A simple authentication page that prompts the user for a username and password before granting
