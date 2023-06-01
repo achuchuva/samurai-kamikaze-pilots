@@ -32,6 +32,12 @@
                 <a class="button" href="#collapsible-menu">
                     COLLAPSIBLE MENU
                 </a>
+                <a class="button" href="#normalising-dataset">
+                    NORMALISING DATASET
+                </a>
+                <a class="button" href="#login-page">
+                    LOGIN PAGE
+                </a>
             </div>
         </section>
 
@@ -99,6 +105,48 @@
                     Sidebar</a>
             </p>
         </div>
+        <div id="normalising-dataset">
+            <h2>Normalising dataset</h2>
+            <h3>What is it</h3>
+            <p>
+                Two extra tables were created along with the EOI table: address and skills. They were primarily implemented
+                reduce the clutter of the database structure so that more technical application data is separated from the
+                more clear and simple to read EOI table.
+            </p>
+            <h3>Going beyond basic requirements</h3>
+            <p>
+                Each extra table has a primary-foreign key relationship to the EOI table, ensuring that to delete data
+                no leftover, unused entries are forgotten. In this way, the original EOI table is enhanced to outsource user
+                information other areas where it can be more easily accessed while still maintaining data integrity.
+            </p>
+            <h3>The code involved</h3>
+            <p>
+                First, MySQL queries and direct modifications in phpMyAdmin were used to create the tables as well as bind
+                values with a primary-foreign key relationship. In code, fetching and uploading user data to the database is done
+                in a step-by-step process that begins with referencing entries in the EOI table after which the eoi number (foreign key)
+                is used to access data in the address and skills table.
+            </p>
+        </div>
+        <div id="login-page">
+            <h2>Login Page</h2>
+            <h3>What is it</h3>
+            <p>
+                A simple authentication page that prompts the user for a username and password before granting
+                admittance to the manage web page.
+            </p>
+            <h3>Going beyond basic requirements</h3>
+            <p>
+                Having a manager page that can view, modify and even delete values from SKP's database that is accessible
+                from the landing page isn't very secure. As such, authenticating whether the person accessing the website
+                has the correct authorisation enhances the website and protects potentially sensitive user information.
+            </p>
+            <h3>The code involved</h3>
+            <p>
+                The login page handles the authentication for the manage page by providing a form to submit a username
+                and password. Upon successful authentication, the user is granted entry to the manage page and can even
+                exit and come back to the page without re-authentication. However, upon closing the browser, the login
+                process needs to be completed again.
+            </p>
         </div>
 
     </section>
