@@ -7,7 +7,7 @@
         <img src="./images/SKPLogo.png" class="logo" alt="HOME">
 
         <div class="manage-link">
-            <a href="login.php">
+            <a href="manage.php">
                 MANAGE
             </a>
         </div>

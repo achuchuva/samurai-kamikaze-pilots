@@ -25,6 +25,10 @@
 
             <?php
 
+            if ($_SERVER['REQUEST_METHOD'] != 'POST') {
+                header("location: apply.php");
+            }
+
             require_once("settings.php");
 
             $POSTCODE_REGEX = '/^[0-9]{4}+$/';
@@ -62,6 +66,13 @@
             {
                 $d = DateTime::createFromFormat($format, $date);
                 return $d && $d->format($format) === $date;
+            }
+
+            function calculate_age($date)
+            {
+                $today = date("Y-m-d");
+                $diff = date_diff(date_create($date), date_create($today));
+                return $diff->format('%y');
             }
 
             $conn = @mysqli_connect(
@@ -114,6 +125,10 @@
                     if (!validate_date($birthdate)) {
                         $error_message .= "<p>The entered birthdate doesn't match the expected format.</p>";
                     }
+                    $age = calculate_age($birthdate);
+                    if ($age < 10 || $age > 120) {
+                        $error_message .= "<p>Enter an age between 10 and 120 years old.</p>";
+                    }                
                 }
 
                 if (empty($_POST["gender"])) {
@@ -253,6 +268,16 @@
                     echo '<br><a href="apply.php" class="button">RETURN TO FORM</a>';
                 } else {
                     try {
+                        $eoi_query = "CREATE TABLE IF NOT EXISTS eoi (
+                            eoi_number INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
+                            job_ref VARCHAR(5) NOT NULL,
+                            first_name VARCHAR(20) NOT NULL, 
+                            last_name VARCHAR(20) NOT NULL, 
+                            email VARCHAR(64) NOT NULL,
+                            phone VARCHAR(12) NOT NULL,
+                            other_skills TEXT NULL,
+                            status ENUM('New','Current','Final') NOT NULL);";
+                        mysqli_query($conn, $eoi_query);
                         $eoi_query = "INSERT INTO `$eoi_table` (`job_ref`, `first_name`, `last_name`, `email`, `phone`, `other_skills`, `status`)
                             VALUES ('$job_ref', '$firstname', '$lastname', '$email', '$phone', '$other', 'New');";
                         $eoi_result = mysqli_query($conn, $eoi_query);
@@ -262,6 +287,15 @@
 
                         $eoi_number = mysqli_insert_id($conn);
 
+                        $address_query = "CREATE TABLE IF NOT EXISTS address (
+                            address_id INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
+                            eoi_number INT NOT NULL,
+                            street_address VARCHAR(40) NOT NULL,
+                            suburb VARCHAR(40) NOT NULL,
+                            state VARCHAR(3) NOT NULL,
+                            postcode VARCHAR(4) NOT NULL,
+                            FOREIGN KEY (eoi_number) REFERENCES eoi(eoi_number));";
+                        mysqli_query($conn, $address_query);
                         $address_query = "INSERT INTO `$address_table` (`eoi_number`, `street_address`, `suburb`, `state`, `postcode`)
                         VALUES ('$eoi_number', '$street', '$suburb', '$state', '$postcode');";
                         $address_result = mysqli_query($conn, $address_query);
@@ -270,6 +304,12 @@
                         }
 
                         foreach ($skills as &$skill) {
+                            $skills_query = "CREATE TABLE IF NOT EXISTS eoi_skills (
+                                eoi_number INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
+                                job_id INT NOT NULL,
+                                skill_id INT NOT NULL,
+                                FOREIGN KEY (eoi_number) REFERENCES eoi(eoi_number));";
+                            mysqli_query($conn, $skills_query);
                             $skills_query = "INSERT INTO `$skills_table` (`eoi_number`, `job_id`, `skill_id`)
                         VALUES ('$eoi_number',
                         (SELECT job_id from jobs WHERE job_ref='$job_ref'),
@@ -281,7 +321,7 @@
                         }
 
                         echo "<h1 class='green'>Thank you for submitting your expression of interest</h1>";
-                        echo "<p>We will review your application as soon as possible and we look forward to your career with SKP.</p>";
+                        echo "<p>Your identification number is $eoi_number. We will review your application as soon as possible and we look forward to your career with SKP.</p>";
                         echo $error_message;
                     } catch (Exception $exc) {
                         echo "<h1 class='red'>There was an error processing your expression of interest</h1>";
