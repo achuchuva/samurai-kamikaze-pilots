@@ -53,6 +53,29 @@
         </form>
 
         <form method="post" class="manage-form">
+            <h3>Select job to delete</h3>
+            <select name="delete">
+                <?php
+                require_once("settings.php");
+
+                $conn = @mysqli_connect(
+                    $host,
+                    $user,
+                    $pwd,
+                    $sql_db
+                );
+
+                if ($conn) {
+                    echo "<option value='none'>None Selected</option>";
+
+                    $query = "SELECT * FROM `jobs`;";
+                    $result = mysqli_query($conn, $query);
+                    while ($row = mysqli_fetch_assoc($result)) {
+                        echo "<option value=", $row["job_ref"], ">#", $row["job_ref"], " (", $row["job_title"], ")</option>";
+                    }
+                }
+                ?>
+            </select>
             <?php
             session_start();
 
@@ -93,13 +116,17 @@
 
                 if ($conn) {
                     if (isset($_POST["delete"])) {
-                        $delete_eois = $_POST["delete"];
-                        foreach ($delete_eois as $eoi_number) {
-                            $skills_query = "DELETE FROM eoi_skills WHERE eoi_number='$eoi_number'";
+                        if ($_POST["delete"] != "none") {
+                            $job_ref_to_delete = $_POST["delete"];
+                            $skills_query = "DELETE FROM eoi_skills WHERE job_id IN (
+                                SELECT job_id FROM jobs WHERE job_ref='$job_ref_to_delete'
+                            )";
                             mysqli_query($conn, $skills_query);
-                            $address_query = "DELETE FROM address WHERE eoi_number='$eoi_number'";
+                            $address_query = "DELETE FROM address WHERE eoi_number IN (
+                            SELECT eoi_number FROM eoi WHERE job_ref='$job_ref_to_delete'
+                            )";
                             mysqli_query($conn, $address_query);
-                            $eoi_query = "DELETE FROM eoi WHERE eoi_number='$eoi_number'";
+                            $eoi_query = "DELETE FROM eoi WHERE job_ref='$job_ref_to_delete'";
                             mysqli_query($conn, $eoi_query);
                         }
                     }
@@ -139,7 +166,6 @@
                         . "<th scope=\"col\">Skills</th>\n"
                         . "<th scope=\"col\">Other skills</th>\n"
                         . "<th scope=\"col\">Status</th>\n"
-                        . "<th scope=\"col\">Delete</th>\n"
                         . "</tr>\n";
 
                     // Retrieve current record pointed by the result pointer
@@ -194,7 +220,6 @@
                             <option value='$eoi_number,$opt_2'>$opt_2</option>
                         </select>
                     </td>\n ";
-                        echo "<td><input type='checkbox' id='delete' name='delete[]' value='$eoi_number'></td>\n ";
                         echo "</tr>\n ";
                     }
 
