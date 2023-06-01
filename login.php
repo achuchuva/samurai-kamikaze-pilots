@@ -25,7 +25,7 @@
         <div class="index-content">
             <section>
                 <h2>Manage Login Form</h2>
-                <form method="post" class="login-form">
+                <form method="post" class="login-form" novalidate="novalidate">
                     <div class="container">
                         <p><label for="username">Username</label>
                             <input type="text" placeholder="Enter Username" name="username" required>

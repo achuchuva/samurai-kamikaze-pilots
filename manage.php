@@ -18,7 +18,7 @@
         ?>
 
         <h1 class="centered">Welcome to the database, Manager.</h1>
-        <form method="get" class="manage-form">
+        <form method="get" class="manage-form" novalidate="novalidate">
             <h3>Filter by applicant name</h3>
             <p><label for="first_name">First Name: </label>
                 <input type="text" name="first_name" id="first_name" />
@@ -52,7 +52,7 @@
             <p><input type="submit" value="Search" /></p>
         </form>
 
-        <form method="post" class="manage-form">
+        <form method="post" class="manage-form" novalidate="novalidate">
             <h3>Select job to delete</h3>
             <select name="delete">
                 <?php
@@ -66,7 +66,7 @@
                 );
 
                 if ($conn) {
-                    echo "<option value='none'>None Selected</option>";
+                    echo "<option value='none'>None Job Selected</option>";
 
                     $query = "SELECT * FROM `jobs`;";
                     $result = mysqli_query($conn, $query);
