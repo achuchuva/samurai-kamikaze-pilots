@@ -36,6 +36,18 @@
                         </p>
 
                         <input type="submit" value="Login" />
+
+                        <?php
+                            session_start();
+
+                            if (isset($_SESSION['empty_username']) && $_SESSION["empty_username"]) {
+                                echo "<p class='error-message'>You haven't entered a username</p>";
+                            } else if (isset($_SESSION['empty_password']) && $_SESSION["empty_password"]) {
+                                echo "<p class='error-message'>You haven't entered a password</p>";
+                            } else if (isset($_SESSION['wrong_credentials']) && $_SESSION["wrong_credentials"]) {
+                                echo "<p class='error-message'>The entered credentials are incorrect</p>";
+                            }
+                        ?>
                     </div>
                 </form>
             </section>
@@ -60,17 +72,24 @@
 
     if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
+        $_SESSION['empty_username'] = false;
+        $_SESSION['empty_password'] = false;
+        $_SESSION['wrong_credentials'] = false;
+
         $entered_username = sanitise_input($_POST["username"]);
         $entered_password = sanitise_input($_POST["password"]);
 
         if (empty($entered_username)) {
+            $_SESSION['empty_username'] = true;
             header("location: login.php");
         } else if (empty($entered_password)) {
+            $_SESSION['empty_password'] = true;
             header("location: login.php");
         } else if (strcmp($entered_username, $user) == 0 && strcmp($entered_password, $pwd) == 0) {
             $_SESSION['loggedin'] = true;
             header("location: manage.php");
         } else {
+            $_SESSION['wrong_credentials'] = true;
             header("location: login.php");
         }
     }
