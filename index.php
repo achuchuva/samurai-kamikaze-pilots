@@ -51,6 +51,7 @@
                     your application.
                 </p>
                 <a href="https://www.youtube.com/watch?v=6bJt4Fd_mwk">Link to group video assignment 1</a>
+                <br>
                 <a href="https://www.youtube.com/watch?v=39-a6K3Ch7k">Link to group video assignment 2</a>
                 <br>
                 <br>
