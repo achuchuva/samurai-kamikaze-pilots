@@ -10,7 +10,7 @@
     <meta name="author" content="Anton Chuchuva">
     <link rel="stylesheet" href="styles/style.css">
     <link rel="stylesheet" href="styles/mobile.css">
-    <title>SKP - Home</title>
+    <title>SKP - Login</title>
 </head>
 
 <body>
